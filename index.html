@@ -552,6 +552,34 @@ nav {
   color: var(--black);
 }
 
+/* ─── PHOTO PLACEHOLDER ─── */
+.producer-photo {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  border: 1px solid rgba(10,10,10,0.15);
+  display: flex;
+  align-items: flex-end;
+  padding: 0.75rem 1rem;
+  background: rgba(10,10,10,0.03);
+  margin-bottom: 1.25rem;
+  overflow: hidden;
+}
+
+.producer-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: var(--mid);
+  text-transform: uppercase;
+}
+
 /* ─── LOT ITEMS (inside producer) ─── */
 .lot-list { display: flex; flex-direction: column; }
 
@@ -1031,11 +1059,11 @@ footer {
 <section id="producers">
 
   <div class="producers-header">
-    <h2 class="producers-title en-only">PRODUCERS</h2>
-    <h2 class="producers-title es-only">PRODUCTORES</h2>
+    <h2 class="producers-title en-only">2025<br>HARVEST</h2>
+    <h2 class="producers-title es-only">COSECHA<br>2025</h2>
     <p class="producers-meta">
-      <span class="en-only">2025 harvest · 5 lots</span>
-      <span class="es-only">Cosecha 2025 · 5 lotes</span>
+      <span class="en-only">2 producers · 5 lots · Brunca, CR</span>
+      <span class="es-only">2 productores · 5 lotes · Brunca, CR</span>
     </p>
   </div>
 
@@ -1043,6 +1071,9 @@ footer {
   <div class="producer-block">
     <div class="producer-info">
       <div>
+        <div class="producer-photo">
+          <span class="photo-label">↑ Cerro Buena Vista · Brunca</span>
+        </div>
         <h3 class="producer-name">LICA<br>TORRES</h3>
         <p class="producer-sub">Cerro Buena Vista · 1600–1800 msnm · Brunca</p>
       </div>
@@ -1097,6 +1128,9 @@ footer {
   <div class="producer-block">
     <div class="producer-info">
       <div>
+        <div class="producer-photo">
+          <span class="photo-label">↑ El Arrempujón · Sabalito, Coto Brus</span>
+        </div>
         <h3 class="producer-name">DON<br>HUMBERTO</h3>
         <p class="producer-sub">El Arrempujón · 1300 msnm · Sabalito, Coto Brus</p>
       </div>
@@ -1151,16 +1185,16 @@ footer {
     </p>
 
     <ul class="statement-bullets en-block">
-      <li>Born and raised in Sabalito — direct access no external broker has</li>
-      <li>Technology background — full traceability documentation per lot</li>
-      <li>Every lot Q-grader cupped before export — no surprises in the cup</li>
-      <li>Same producers every season — consistency your customers can rely on</li>
+      <li>Origin access built on years of trust — not a cold call to a farmer</li>
+      <li>Full export logistics handled — you receive the coffee, not the paperwork</li>
+      <li>Every lot Q-grader cupped and documented before it ships</li>
+      <li>New producers added each season — always fresh, always traceable</li>
     </ul>
     <ul class="statement-bullets es-block">
-      <li>Nacido en Sabalito — acceso directo que ningún intermediario externo tiene</li>
-      <li>Perfil tecnológico — documentación de trazabilidad completa por lote</li>
-      <li>Cada lote catado por Q-grader antes de exportar — sin sorpresas en la taza</li>
-      <li>Mismos productores cada temporada — consistencia en la que tus clientes pueden confiar</li>
+      <li>Acceso al origen construido en años de confianza — no una llamada en frío a un productor</li>
+      <li>Logística de exportación completa — recibís el café, no el papeleo</li>
+      <li>Cada lote catado por Q-grader y documentado antes de salir</li>
+      <li>Nuevos productores cada temporada — siempre fresco, siempre trazable</li>
     </ul>
   </div>
 </section>
