@@ -36,7 +36,7 @@ body.es .es-block { display: block; }
 .es-block { display: none; }
 
 /* ─── NAV ─── */
-nav {
+body > nav {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
