@@ -224,7 +224,7 @@ body {
 .es-only { display: none; }
 body.es .en-only { display: none; }
 body.es .es-only { display: inline; }
-body.es .en-block { display: none; }
+body.es .en-block { display: none !important; }
 body.es .es-block { display: block; }
 .es-block { display: none; }
 
@@ -1095,15 +1095,17 @@ footer {
       "No vendo café de Costa Rica. Vendo el café de Lica Torres — a 1,800 metros, White Honey, cosecha 2025. Y tus clientes sabrán exactamente de qué tierra viene."
     </p>
 
-    <ul class="statement-bullets">
-      <li class="en-only">Born and raised in Sabalito — direct access no external broker has</li>
-      <li class="es-only">Nacido en Sabalito — acceso directo que ningún intermediario externo tiene</li>
-      <li class="en-only">Technology background — full traceability documentation per lot</li>
-      <li class="es-only">Perfil tecnológico — documentación de trazabilidad completa por lote</li>
-      <li class="en-only">Every lot Q-grader cupped before export — no surprises in the cup</li>
-      <li class="es-only">Cada lote catado por Q-grader antes de exportar — sin sorpresas en la taza</li>
-      <li class="en-only">Same producers every season — consistency your customers can rely on</li>
-      <li class="es-only">Mismos productores cada temporada — consistencia en la que tus clientes pueden confiar</li>
+    <ul class="statement-bullets en-block">
+      <li>Born and raised in Sabalito — direct access no external broker has</li>
+      <li>Technology background — full traceability documentation per lot</li>
+      <li>Every lot Q-grader cupped before export — no surprises in the cup</li>
+      <li>Same producers every season — consistency your customers can rely on</li>
+    </ul>
+    <ul class="statement-bullets es-block">
+      <li>Nacido en Sabalito — acceso directo que ningún intermediario externo tiene</li>
+      <li>Perfil tecnológico — documentación de trazabilidad completa por lote</li>
+      <li>Cada lote catado por Q-grader antes de exportar — sin sorpresas en la taza</li>
+      <li>Mismos productores cada temporada — consistencia en la que tus clientes pueden confiar</li>
     </ul>
   </div>
 </section>
