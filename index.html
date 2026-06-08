@@ -305,11 +305,19 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border-bottom: 1px solid var(--black);
 }
 
 .hero-top {
   padding: 3rem 1.5rem 2rem;
-  border-bottom: 1px solid var(--black);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .hero-top { padding: 5rem 3rem 3rem; }
 }
 
 .hero-eyebrow {
@@ -318,45 +326,53 @@ nav {
   letter-spacing: 0.25em;
   color: var(--mid);
   text-transform: uppercase;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
 }
 
-.hero-title {
-  font-family: var(--font-display);
-  font-size: clamp(6rem, 28vw, 18rem);
-  line-height: 0.88;
-  letter-spacing: 0.02em;
-  color: var(--black);
-}
-
-.hero-title-sub {
-  font-family: var(--font-display);
-  font-size: clamp(1.4rem, 6vw, 4rem);
-  letter-spacing: 0.4em;
-  color: var(--black);
-  opacity: 0.22;
-  margin-top: 0.4rem;
-  display: block;
-}
-
-.hero-middle {
-  padding: 2rem 1.5rem;
-}
-
-.hero-desc {
+.hero-question {
   font-family: var(--font-serif);
-  font-size: clamp(1.2rem, 3.5vw, 1.55rem);
-  font-weight: 300;
+  font-size: clamp(2rem, 6vw, 4.5rem);
   font-style: italic;
-  line-height: 1.55;
+  font-weight: 300;
+  line-height: 1.25;
   color: var(--black);
-  max-width: 520px;
+  max-width: 820px;
+  margin-bottom: 3rem;
+}
+
+.hero-question em {
+  font-style: normal;
+  font-weight: 400;
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--black);
+  text-decoration: none;
+  border: 1px solid var(--black);
+  padding: 10px 18px;
+  transition: background 0.15s, color 0.15s;
+  align-self: flex-start;
+}
+.hero-cta:hover {
+  background: var(--black);
+  color: var(--white);
 }
 
 .hero-bottom {
   border-top: 1px solid var(--black);
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+@media (min-width: 768px) {
+  .hero-bottom { grid-template-columns: 1fr 1fr 1fr 1fr; }
 }
 
 .hero-stat {
@@ -369,6 +385,14 @@ nav {
 .hero-stat:nth-child(2n) { border-right: none; }
 .hero-stat:nth-child(3),
 .hero-stat:nth-child(4) { border-top: 1px solid var(--black); }
+
+@media (min-width: 768px) {
+  .hero-stat { padding: 1.5rem 2rem; }
+  .hero-stat:nth-child(2n) { border-right: 1px solid var(--black); }
+  .hero-stat:nth-child(3),
+  .hero-stat:nth-child(4) { border-top: none; }
+  .hero-stat:last-child { border-right: none; }
+}
 
 .stat-val {
   font-family: var(--font-display);
@@ -385,67 +409,76 @@ nav {
   text-transform: uppercase;
 }
 
-@media (min-width: 768px) {
-  .hero-top { padding: 4rem 3rem 3rem; }
-  .hero-middle { padding: 2.5rem 3rem; }
-  .hero-bottom { grid-template-columns: 1fr 1fr 1fr 1fr; }
-  .hero-stat { padding: 1.5rem 2rem; }
-  .hero-stat:nth-child(2n) { border-right: 1px solid var(--black); }
-  .hero-stat:nth-child(3),
-  .hero-stat:nth-child(4) { border-top: none; }
-  .hero-stat:last-child { border-right: none; }
-}
-
-/* ─── ABOUT STRIP ─── */
-.about-strip {
-  padding: 3rem 1.5rem;
+/* ─── ORIGIN SECTION ─── */
+.origin-section {
+  padding: 4rem 1.5rem;
   border-bottom: 1px solid var(--black);
-  display: grid;
-  gap: 1rem;
 }
 
 @media (min-width: 768px) {
-  .about-strip {
-    padding: 3rem 3rem;
-    grid-template-columns: 200px 1fr;
-    gap: 3rem;
+  .origin-section {
+    padding: 6rem 3rem;
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 4rem;
     align-items: start;
   }
 }
 
-.about-label {
+.section-label {
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.25em;
   color: var(--mid);
   text-transform: uppercase;
-  padding-top: 4px;
-}
-
-.about-text {
-  font-family: var(--font-serif);
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
-  font-weight: 300;
-  line-height: 1.75;
-  color: var(--black);
-}
-
-.about-text strong { font-weight: 400; }
-
-/* ─── CATALOG ─── */
-.catalog-header {
-  padding: 2.5rem 1.5rem 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  border-bottom: 1px solid var(--black);
+  margin-bottom: 2.5rem;
+  padding-top: 6px;
 }
 
 @media (min-width: 768px) {
-  .catalog-header { padding: 3rem 3rem 1.5rem; }
+  .section-label { margin-bottom: 0; }
 }
 
-.catalog-title {
+.origin-content {}
+
+.origin-quote {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.45;
+  color: var(--black);
+  margin-bottom: 2rem;
+  border-left: 2px solid var(--black);
+  padding-left: 1.5rem;
+}
+
+.origin-text {
+  font-family: var(--font-serif);
+  font-size: clamp(1rem, 2.5vw, 1.15rem);
+  font-weight: 300;
+  line-height: 1.85;
+  color: var(--black);
+}
+
+.origin-text + .origin-text {
+  margin-top: 1.25rem;
+}
+
+/* ─── PRODUCERS ─── */
+.producers-header {
+  padding: 3rem 1.5rem 2rem;
+  border-bottom: 1px solid var(--black);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+@media (min-width: 768px) {
+  .producers-header { padding: 4rem 3rem 2rem; }
+}
+
+.producers-title {
   font-family: var(--font-display);
   font-size: clamp(2.5rem, 10vw, 6rem);
   letter-spacing: 0.06em;
@@ -453,33 +486,83 @@ nav {
   line-height: 1;
 }
 
-.catalog-meta {
+.producers-meta {
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.15em;
   color: var(--mid);
   text-transform: uppercase;
-  padding-bottom: 4px;
   text-align: right;
+  padding-bottom: 4px;
 }
 
-/* ─── LOT ITEMS ─── */
+.producer-block {
+  border-bottom: 1px solid var(--black);
+}
+
+.producer-info {
+  padding: 2.5rem 1.5rem;
+  border-bottom: 1px solid rgba(10,10,10,0.12);
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .producer-info {
+    padding: 3.5rem 3rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+}
+
+.producer-name {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 10vw, 6.5rem);
+  letter-spacing: 0.03em;
+  line-height: 0.9;
+  color: var(--black);
+}
+
+.producer-sub {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--mid);
+  text-transform: uppercase;
+  margin-top: 0.75rem;
+}
+
+.producer-bio {
+  font-family: var(--font-serif);
+  font-size: clamp(1rem, 2.5vw, 1.15rem);
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--black);
+}
+
+/* ─── LOT ITEMS (inside producer) ─── */
 .lot-list { display: flex; flex-direction: column; }
 
 .lot-item {
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
-  padding: 1.5rem;
-  border-bottom: 1px solid var(--black);
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid rgba(10,10,10,0.1);
   text-decoration: none;
   color: inherit;
   gap: 1rem;
   transition: background 0.15s, color 0.15s;
 }
 
+.lot-item:last-child {
+  border-bottom: none;
+}
+
 @media (min-width: 768px) {
-  .lot-item { padding: 2rem 3rem; }
+  .lot-item { padding: 1.5rem 3rem; }
 }
 
 .lot-item:hover { background: var(--black); }
@@ -493,7 +576,7 @@ nav {
 .lot-item-left {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 4px;
 }
 
 .lot-process {
@@ -507,19 +590,10 @@ nav {
 
 .lot-name {
   font-family: var(--font-display);
-  font-size: clamp(1.8rem, 6vw, 3.2rem);
+  font-size: clamp(1.8rem, 6vw, 3rem);
   letter-spacing: 0.04em;
   color: var(--black);
   line-height: 1;
-  transition: color 0.15s;
-}
-
-.lot-producer {
-  font-family: var(--font-serif);
-  font-size: 0.9rem;
-  font-style: italic;
-  font-weight: 300;
-  color: var(--mid);
   transition: color 0.15s;
 }
 
@@ -527,13 +601,12 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 3px;
-  flex-shrink: 0;
+  gap: 2px;
 }
 
 .lot-altitude {
   font-family: var(--font-display);
-  font-size: clamp(1.4rem, 4vw, 2rem);
+  font-size: 1.8rem;
   letter-spacing: 0.04em;
   color: var(--black);
   line-height: 1;
@@ -550,86 +623,91 @@ nav {
 }
 
 .lot-arrow {
-  font-size: 1rem;
-  color: var(--mid);
-  margin-top: 0.4rem;
+  font-size: 1.2rem;
+  color: var(--black);
+  margin-top: 4px;
   transition: color 0.15s;
 }
 
-/* ─── HOW ─── */
-.how-section {
-  padding: 3rem 1.5rem;
+/* ─── STATEMENT (dark section) ─── */
+.statement-section {
+  background: var(--black);
+  padding: 4rem 1.5rem;
   border-bottom: 1px solid var(--black);
 }
 
 @media (min-width: 768px) {
-  .how-section { padding: 4rem 3rem; }
+  .statement-section {
+    padding: 7rem 3rem;
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
 }
 
-.section-eyebrow {
+.statement-label {
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.25em;
-  color: var(--mid);
+  color: rgba(248,246,242,0.35);
   text-transform: uppercase;
-  margin-bottom: 2rem;
-}
-
-.section-heading {
-  font-family: var(--font-display);
-  font-size: clamp(2.2rem, 8vw, 5rem);
-  letter-spacing: 0.06em;
-  color: var(--black);
-  line-height: 1;
   margin-bottom: 2.5rem;
+  padding-top: 6px;
 }
 
-.how-steps { display: flex; flex-direction: column; }
-
-.how-step {
-  display: grid;
-  grid-template-columns: 2.5rem 1fr;
-  gap: 1rem;
-  padding: 1.25rem 0;
-  border-top: 1px solid rgba(10,10,10,0.12);
-  align-items: start;
+@media (min-width: 768px) {
+  .statement-label { margin-bottom: 0; }
 }
 
-.step-num {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  color: var(--mid);
-  padding-top: 3px;
-}
+.statement-content {}
 
-.step-title {
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  letter-spacing: 0.06em;
-  color: var(--black);
-  margin-bottom: 4px;
-}
-
-.step-desc {
+.statement-text {
   font-family: var(--font-serif);
-  font-size: 1rem;
+  font-size: clamp(1.6rem, 4vw, 2.8rem);
   font-style: italic;
   font-weight: 300;
-  color: var(--mid);
-  line-height: 1.65;
+  line-height: 1.4;
+  color: var(--white);
+  margin-bottom: 3rem;
+}
+
+.statement-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.statement-bullets li {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: rgba(248,246,242,0.5);
+  text-transform: uppercase;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  line-height: 1.6;
+}
+
+.statement-bullets li::before {
+  content: '→';
+  color: var(--white);
+  flex-shrink: 0;
 }
 
 /* ─── CONTACT ─── */
 .contact-section {
-  padding: 3rem 1.5rem;
+  padding: 4rem 1.5rem;
   border-bottom: 1px solid var(--black);
+  display: grid;
+  gap: 3rem;
 }
 
 @media (min-width: 768px) {
   .contact-section {
-    padding: 4rem 3rem;
-    display: grid;
+    padding: 6rem 3rem;
     grid-template-columns: 1fr 1fr;
     gap: 5rem;
     align-items: start;
@@ -638,92 +716,104 @@ nav {
 
 .contact-heading {
   font-family: var(--font-display);
-  font-size: clamp(2.2rem, 8vw, 5rem);
+  font-size: clamp(3rem, 10vw, 6rem);
   letter-spacing: 0.06em;
+  line-height: 0.92;
   color: var(--black);
-  line-height: 1;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .contact-sub {
   font-family: var(--font-serif);
-  font-size: 1rem;
-  font-style: italic;
+  font-size: clamp(1rem, 2.5vw, 1.15rem);
   font-weight: 300;
+  font-style: italic;
+  line-height: 1.75;
   color: var(--mid);
-  line-height: 1.65;
-  margin-bottom: 2rem;
 }
 
-@media (min-width: 768px) {
-  .contact-sub { margin-bottom: 0; }
+.contact-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  color: var(--mid);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
 }
 
-.contact-form { display: flex; flex-direction: column; }
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
 
 .form-group {
   display: flex;
   flex-direction: column;
-  border-top: 1px solid var(--black);
+  gap: 6px;
 }
-
-.form-group:last-of-type { border-bottom: 1px solid var(--black); }
 
 .form-label {
   font-family: var(--font-mono);
   font-size: 11px;
-  letter-spacing: 0.2em;
-  color: var(--mid);
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  padding-top: 0.75rem;
+  color: var(--mid);
 }
 
 .form-input,
 .form-select,
 .form-textarea {
   font-family: var(--font-serif);
-  font-size: 1.1rem;
-  font-style: italic;
+  font-size: 1rem;
   font-weight: 300;
   color: var(--black);
-  background: none;
+  background: transparent;
   border: none;
+  border-bottom: 1px solid var(--black);
+  padding: 8px 0;
   outline: none;
-  padding: 0.35rem 0 0.75rem;
+  transition: border-color 0.15s;
   width: 100%;
   -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0;
 }
 
-.form-input::placeholder,
-.form-textarea::placeholder { color: rgba(10,10,10,0.2); }
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-bottom-color: var(--black);
+}
 
-.form-textarea { resize: none; min-height: 80px; }
-
-.form-select option { background: var(--white); color: var(--black); }
+.form-textarea {
+  resize: none;
+  height: 80px;
+}
 
 .btn-submit {
-  font-family: var(--font-display);
-  font-size: 1.1rem;
-  letter-spacing: 0.15em;
-  color: var(--white);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
   background: var(--black);
+  color: var(--white);
   border: none;
-  padding: 1rem 1.5rem;
+  padding: 14px 24px;
   cursor: pointer;
-  width: 100%;
-  text-align: left;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 1.5rem;
   transition: opacity 0.15s;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  align-self: flex-start;
+  margin-top: 0.5rem;
 }
-.btn-submit:hover { opacity: 0.75; }
+.btn-submit:hover { opacity: 0.8; }
 .btn-submit::after { content: '→'; font-size: 1rem; }
 
 /* ─── FOOTER ─── */
 footer {
-  padding: 2rem 1.5rem;
+  padding: 3rem 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -731,7 +821,7 @@ footer {
 
 @media (min-width: 768px) {
   footer {
-    padding: 2.5rem 3rem;
+    padding: 3rem 3rem;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
@@ -742,13 +832,13 @@ footer {
   font-family: var(--font-display);
   font-size: 2.8rem;
   letter-spacing: 0.06em;
-  color: var(--black);
   line-height: 0.9;
+  color: var(--black);
 }
 
 .footer-tagline {
   font-family: var(--font-serif);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-style: italic;
   font-weight: 300;
   color: var(--mid);
@@ -758,16 +848,20 @@ footer {
 .footer-nav {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .footer-nav { align-items: flex-end; }
 }
 
 .footer-nav a {
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.2em;
+  text-transform: uppercase;
   color: var(--mid);
   text-decoration: none;
-  text-transform: uppercase;
   transition: color 0.15s;
 }
 .footer-nav a:hover { color: var(--black); }
@@ -778,22 +872,21 @@ footer {
   letter-spacing: 0.15em;
   color: var(--mid);
   text-transform: uppercase;
-  align-self: flex-end;
+  margin-top: 0.5rem;
 }
-
 </style>
+
 </head>
+
 <body id="body">
 
 <!-- NAV -->
 <nav>
-  <a href="/" class="nav-logo">COFI TRADERS</a>
+  <a class="nav-logo" href="/">COFI TRADERS</a>
   <div class="nav-right">
     <div class="nav-links">
-      <a href="#catalog" class="en-only">Catalog</a>
-      <a href="#catalog" class="es-only">Catálogo</a>
-      <a href="#how" class="en-only">How it works</a>
-      <a href="#how" class="es-only">Cómo funciona</a>
+      <a href="#producers" class="en-only">Producers</a>
+      <a href="#producers" class="es-only">Productores</a>
       <a href="#contact" class="en-only">Contact</a>
       <a href="#contact" class="es-only">Contacto</a>
     </div>
@@ -808,15 +901,22 @@ footer {
 <section class="hero">
   <div class="hero-top">
     <p class="hero-eyebrow">
-      <span class="en-only">Costa Rica · Specialty Coffee · Direct Trade</span>
-      <span class="es-only">Costa Rica · Café Especial · Origen Directo</span>
+      <span class="en-only">Sabalito, Coto Brus · Costa Rica · Specialty Coffee</span>
+      <span class="es-only">Sabalito, Coto Brus · Costa Rica · Café Especial</span>
     </p>
-    <h1 class="hero-title">COFI<span class="hero-title-sub">TRADERS</span></h1>
-  </div>
 
-  <div class="hero-middle">
-    <p class="hero-desc en-block">Micro-lots from small producers in Costa Rica's Brunca region — direct to international roasters.</p>
-    <p class="hero-desc es-block">Micro-lotes de pequeños productores en la región Brunca de Costa Rica — directo a tostadores internacionales.</p>
+    <h1 class="hero-question en-block">
+      What if the coffee from my town reached a roaster in Tokyo — with the name of <em>who grew it</em>?
+    </h1>
+    <h1 class="hero-question es-block">
+      ¿Qué pasaría si el café de mi pueblo llegara a un tostador en Tokio — con el nombre de <em>quien lo cultivó</em>?
+    </h1>
+
+    <a href="#producers" class="hero-cta">
+      <span class="en-only">See the lots</span>
+      <span class="es-only">Ver los lotes</span>
+      →
+    </a>
   </div>
 
   <div class="hero-bottom">
@@ -843,208 +943,180 @@ footer {
   </div>
 </section>
 
-<!-- ABOUT -->
-<div class="about-strip">
-  <p class="about-label en-only">About COFI</p>
-  <p class="about-label es-only">Sobre COFI</p>
-  <p class="about-text en-block">
-    COFI TRADERS was founded by someone who grew up in <strong>Sabalito, Coto Brus</strong> — one of Costa Rica's most authentic coffee-growing communities. We are not a broker. We are the <strong>bridge between the farmer and the roaster</strong>: we know the producers personally, we cup every lot with a certified Q-grader, and we document full traceability so your customers can know exactly whose land grew their coffee.
-  </p>
-  <p class="about-text es-block">
-    COFI TRADERS fue fundada por alguien que creció en <strong>Sabalito, Coto Brus</strong> — una de las comunidades cafeteras más auténticas de Costa Rica. No somos un intermediario. Somos el <strong>puente entre el productor y el tostador</strong>: conocemos a los productores personalmente, catamos cada lote con un Q-grader certificado, y documentamos trazabilidad completa para que tus clientes sepan exactamente de qué tierra viene su café.
-  </p>
-</div>
+<!-- ORIGIN -->
+<section class="origin-section">
+  <p class="section-label en-only">The story</p>
+  <p class="section-label es-only">La historia</p>
 
-<!-- CATALOG -->
-<div class="catalog-header" id="catalog">
-  <h2 class="catalog-title en-only">CATALOG</h2>
-  <h2 class="catalog-title es-only">CATÁLOGO</h2>
-  <p class="catalog-meta">
-    <span class="en-only">2025 harvest · 5 lots</span>
-    <span class="es-only">Cosecha 2025 · 5 lotes</span>
-  </p>
-</div>
+  <div class="origin-content">
+    <p class="origin-quote en-block">
+      "My neighbors grew coffee their whole lives — good coffee, grown at altitude, with character — and sold it at whatever price the beneficio gave them. No name. No story. No recognition for the quality."
+    </p>
+    <p class="origin-quote es-block">
+      "Mis vecinos cultivaban café toda su vida — café bueno, de altura, con carácter — y lo vendían al precio que les ponían en el beneficio. Sin nombre, sin historia, sin reconocimiento por la calidad."
+    </p>
 
-<div class="lot-list">
+    <p class="origin-text en-block">
+      I grew up in Sabalito, Coto Brus. I left, studied, worked in technology, learned to move in international markets. At some point I asked myself a simple question: what would happen if the coffee from my town finally had a name on it?
+    </p>
+    <p class="origin-text es-block">
+      Crecí en Sabalito, Coto Brus. Me fui, estudié, trabajé en tecnología, aprendí a moverme en mercados internacionales. En algún punto me hice una pregunta simple: ¿qué pasaría si el café de mi pueblo tuviera finalmente un nombre?
+    </p>
 
-  <a class="lot-item" href="/lotes/etiope-white-honey">
-    <div class="lot-item-left">
-      <span class="lot-process">White Honey · SL28</span>
-      <span class="lot-name">ETÍOPE 47</span>
-      <span class="lot-producer">Lica Torres — Cerro Buena Vista</span>
-    </div>
-    <div class="lot-item-right">
-      <span class="lot-altitude">1800</span>
-      <span class="lot-alt-lbl">msnm</span>
-      <span class="lot-arrow">→</span>
-    </div>
-  </a>
-
-  <a class="lot-item" href="/lotes/black-cherry">
-    <div class="lot-item-left">
-      <span class="lot-process">Black Cherry · H10</span>
-      <span class="lot-name">MILENIO</span>
-      <span class="lot-producer">Lica Torres — Cerro Buena Vista</span>
-    </div>
-    <div class="lot-item-right">
-      <span class="lot-altitude">1600</span>
-      <span class="lot-alt-lbl">msnm</span>
-      <span class="lot-arrow">→</span>
-    </div>
-  </a>
-
-  <a class="lot-item" href="/lotes/milenio-red-honey">
-    <div class="lot-item-left">
-      <span class="lot-process">Red Honey · H10</span>
-      <span class="lot-name">MILENIO</span>
-      <span class="lot-producer">Lica Torres — Cerro Buena Vista</span>
-    </div>
-    <div class="lot-item-right">
-      <span class="lot-altitude">1600</span>
-      <span class="lot-alt-lbl">msnm</span>
-      <span class="lot-arrow">→</span>
-    </div>
-  </a>
-
-  <a class="lot-item" href="/lotes/venecia-honey">
-    <div class="lot-item-left">
-      <span class="lot-process">Honey · Venecia</span>
-      <span class="lot-name">VENECIA</span>
-      <span class="lot-producer">Don Humberto — El Arrempujón</span>
-    </div>
-    <div class="lot-item-right">
-      <span class="lot-altitude">1300</span>
-      <span class="lot-alt-lbl">msnm</span>
-      <span class="lot-arrow">→</span>
-    </div>
-  </a>
-
-  <a class="lot-item" href="/lotes/centroamericano">
-    <div class="lot-item-left">
-      <span class="lot-process">Natural · Centroamericano</span>
-      <span class="lot-name">CENTROAMERICANO</span>
-      <span class="lot-producer">Don Humberto — El Arrempujón</span>
-    </div>
-    <div class="lot-item-right">
-      <span class="lot-altitude">1300</span>
-      <span class="lot-alt-lbl">msnm</span>
-      <span class="lot-arrow">→</span>
-    </div>
-  </a>
-
-</div>
-
-<!-- HOW IT WORKS -->
-<section class="how-section" id="how">
-  <p class="section-eyebrow en-only">How it works</p>
-  <p class="section-eyebrow es-only">Cómo funciona</p>
-  <h2 class="section-heading en-only">DIRECT<br>FROM ORIGIN</h2>
-  <h2 class="section-heading es-only">DIRECTO<br>DEL ORIGEN</h2>
-  <div class="how-steps">
-
-    <div class="how-step">
-      <span class="step-num">01</span>
-      <div>
-        <p class="step-title en-only">BROWSE THE CATALOG</p>
-        <p class="step-title es-only">EXPLORÁ EL CATÁLOGO</p>
-        <p class="step-desc en-block">Each lot includes full producer info, altitude, process, Q-grader tasting notes, and flavor profile. No PDFs, no waiting for a reply.</p>
-        <p class="step-desc es-block">Cada lote incluye información completa del productor, altitud, proceso, notas de catación Q-grader y perfil de sabor. Sin PDFs, sin esperar respuesta.</p>
-      </div>
-    </div>
-
-    <div class="how-step">
-      <span class="step-num">02</span>
-      <div>
-        <p class="step-title en-only">REQUEST A SAMPLE</p>
-        <p class="step-title es-only">SOLICITÁ UNA MUESTRA</p>
-        <p class="step-desc en-block">We ship green or roasted samples internationally. No minimum commitment. You taste, you decide. We start small on purpose.</p>
-        <p class="step-desc es-block">Enviamos muestras en verde o tostadas internacionalmente. Sin compromiso mínimo. Probás, decidís. Empezamos pequeño a propósito.</p>
-      </div>
-    </div>
-
-    <div class="how-step">
-      <span class="step-num">03</span>
-      <div>
-        <p class="step-title en-only">BUILD THE RELATIONSHIP</p>
-        <p class="step-title es-only">CONSTRUIMOS LA RELACIÓN</p>
-        <p class="step-desc en-block">We work with the same producers every season. That's how we guarantee consistency — and how your customers get a coffee with a story that's true.</p>
-        <p class="step-desc es-block">Trabajamos con los mismos productores cada temporada. Así garantizamos consistencia — y así tus clientes obtienen un café con una historia verdadera.</p>
-      </div>
-    </div>
-
-    <div class="how-step">
-      <span class="step-num">04</span>
-      <div>
-        <p class="step-title en-only">FULL TRACEABILITY</p>
-        <p class="step-title es-only">TRAZABILIDAD COMPLETA</p>
-        <p class="step-desc en-block">Every bag includes a QR code linking to the producer profile, farm photos, and cupping data. Your customers scan and know exactly whose coffee they're drinking.</p>
-        <p class="step-desc es-block">Cada bolsa incluye un código QR vinculado al perfil del productor, fotos de finca y datos de catación. Tus clientes escanean y saben exactamente de quién es el café que toman.</p>
-      </div>
-    </div>
-
+    <p class="origin-text en-block">
+      COFI exists so that happens. Not as a broker. As a bridge — someone who knows the farms because he grew up between them, who speaks the language of international roasters, and who has the technical profile to document and communicate origin in a way no producer can do alone, and no traditional exporter bothers to do.
+    </p>
+    <p class="origin-text es-block">
+      COFI existe para que eso pase. No como intermediario. Como puente — alguien que conoce las fincas porque creció entre ellas, que habla el idioma de los tostadores internacionales, y que tiene el perfil técnico para documentar y comunicar el origen de una manera que ningún productor puede hacer solo y que ningún exportador tradicional se molesta en hacer.
+    </p>
   </div>
 </section>
 
-<!-- FAQ — AEO / LLM SEO -->
-<section class="how-section" id="faq">
-  <p class="section-eyebrow en-only">Frequently asked</p>
-  <p class="section-eyebrow es-only">Preguntas frecuentes</p>
-  <h2 class="section-heading en-only">FAQ</h2>
-  <h2 class="section-heading es-only">FAQ</h2>
-  <div class="how-steps">
+<!-- PRODUCERS + LOTS -->
+<section id="producers">
 
-    <div class="how-step">
-      <span class="step-num">—</span>
+  <div class="producers-header">
+    <h2 class="producers-title en-only">PRODUCERS</h2>
+    <h2 class="producers-title es-only">PRODUCTORES</h2>
+    <p class="producers-meta">
+      <span class="en-only">2025 harvest · 5 lots</span>
+      <span class="es-only">Cosecha 2025 · 5 lotes</span>
+    </p>
+  </div>
+
+  <!-- LICA TORRES -->
+  <div class="producer-block">
+    <div class="producer-info">
       <div>
-        <p class="step-title en-only">WHERE IS COFI TRADERS BASED?</p>
-        <p class="step-title es-only">¿DÓNDE ESTÁ COFI TRADERS?</p>
-        <p class="step-desc en-block">COFI TRADERS is based in Sabalito, Coto Brus, Costa Rica — a small coffee-growing community in the Brunca region. Our founder grew up there, which gives us direct access to local producers that no external broker has.</p>
-        <p class="step-desc es-block">COFI TRADERS está en Sabalito, Coto Brus, Costa Rica — una pequeña comunidad cafetalera en la región Brunca. Nuestro fundador creció ahí, lo que nos da acceso directo a los productores locales que ningún intermediario externo tiene.</p>
+        <h3 class="producer-name">LICA<br>TORRES</h3>
+        <p class="producer-sub">Cerro Buena Vista · 1600–1800 msnm · Brunca</p>
       </div>
+      <p class="producer-bio en-block">
+        Lica produces on the Pacific slopes of Cerro Buena Vista, at up to 1,800 meters. What makes her exceptional is her willingness to experiment — the Black Cherry and the White Honey from the same base lot are proof that she understands process as a creative decision, not just a technical one.
+      </p>
+      <p class="producer-bio es-block">
+        Lica produce en las laderas del Pacífico Sur de Cerro Buena Vista, a hasta 1,800 metros. Lo que la hace especial es su disposición a experimentar — el Black Cherry y el White Honey del mismo lote base son prueba de que entiende que el proceso es una decisión creativa, no solo técnica.
+      </p>
     </div>
 
-    <div class="how-step">
-      <span class="step-num">—</span>
+    <div class="lot-list">
+      <a class="lot-item" href="/lotes/etiope-white-honey">
+        <div class="lot-item-left">
+          <span class="lot-process">White Honey · SL28</span>
+          <span class="lot-name">ETÍOPE 47</span>
+        </div>
+        <div class="lot-item-right">
+          <span class="lot-altitude">1800</span>
+          <span class="lot-alt-lbl">msnm</span>
+          <span class="lot-arrow">→</span>
+        </div>
+      </a>
+
+      <a class="lot-item" href="/lotes/black-cherry">
+        <div class="lot-item-left">
+          <span class="lot-process">Black Cherry · H10</span>
+          <span class="lot-name">MILENIO</span>
+        </div>
+        <div class="lot-item-right">
+          <span class="lot-altitude">1600</span>
+          <span class="lot-alt-lbl">msnm</span>
+          <span class="lot-arrow">→</span>
+        </div>
+      </a>
+
+      <a class="lot-item" href="/lotes/milenio-red-honey">
+        <div class="lot-item-left">
+          <span class="lot-process">Red Honey · H10</span>
+          <span class="lot-name">MILENIO</span>
+        </div>
+        <div class="lot-item-right">
+          <span class="lot-altitude">1600</span>
+          <span class="lot-alt-lbl">msnm</span>
+          <span class="lot-arrow">→</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- DON HUMBERTO -->
+  <div class="producer-block">
+    <div class="producer-info">
       <div>
-        <p class="step-title en-only">DO YOU SHIP SAMPLES INTERNATIONALLY?</p>
-        <p class="step-title es-only">¿ENVÍAN MUESTRAS INTERNACIONALMENTE?</p>
-        <p class="step-desc en-block">Yes. We ship green or roasted samples to roasters in Europe, the United States, Japan, Korea, and beyond. No minimum commitment — you taste first, then decide. Contact us through the form and we respond within 48 hours.</p>
-        <p class="step-desc es-block">Sí. Enviamos muestras en verde o tostadas a tostadores en Europa, Estados Unidos, Japón, Korea y más. Sin compromiso mínimo — primero probás, luego decidís. Contactanos por el formulario y respondemos en 48 horas.</p>
+        <h3 class="producer-name">DON<br>HUMBERTO</h3>
+        <p class="producer-sub">El Arrempujón · 1300 msnm · Sabalito, Coto Brus</p>
       </div>
+      <p class="producer-bio en-block">
+        Don Humberto is from Sabalito — the same town where I grew up. His micro-beneficio El Arrempujón is exactly the kind of operation COFI wants to represent: small, careful, with its own identity. His Venecia Honey and his Centroamericano Natural taste like where they come from.
+      </p>
+      <p class="producer-bio es-block">
+        Don Humberto es de Sabalito — el mismo pueblo donde crecí. Su microbeneficio El Arrempujón es exactamente el tipo de operación que COFI quiere representar: pequeña, cuidadosa, con identidad propia. Su Venecia Honey y su Centroamericano Natural saben a dónde vienen.
+      </p>
     </div>
 
-    <div class="how-step">
-      <span class="step-num">—</span>
-      <div>
-        <p class="step-title en-only">WHAT MAKES BRUNCA REGION COFFEE SPECIAL?</p>
-        <p class="step-title es-only">¿QUÉ HACE ESPECIAL AL CAFÉ DE LA REGIÓN BRUNCA?</p>
-        <p class="step-desc en-block">The Brunca region — including Coto Brus and Pérez Zeledón — sits in southern Costa Rica at altitudes between 1,300 and 1,800 masl. The combination of altitude, volcanic soil, and microclimates produces coffees with exceptional clarity, fruit expression, and complexity. It remains one of the least commercially exploited regions in the country.</p>
-        <p class="step-desc es-block">La región Brunca — incluyendo Coto Brus y Pérez Zeledón — está en el sur de Costa Rica a altitudes entre 1,300 y 1,800 msnm. La combinación de altitud, suelo volcánico y microclimas produce cafés con claridad excepcional, expresión frutal y complejidad. Sigue siendo una de las regiones menos explotadas comercialmente del país.</p>
-      </div>
-    </div>
+    <div class="lot-list">
+      <a class="lot-item" href="/lotes/venecia-honey">
+        <div class="lot-item-left">
+          <span class="lot-process">Honey · Venecia</span>
+          <span class="lot-name">VENECIA</span>
+        </div>
+        <div class="lot-item-right">
+          <span class="lot-altitude">1300</span>
+          <span class="lot-alt-lbl">msnm</span>
+          <span class="lot-arrow">→</span>
+        </div>
+      </a>
 
-    <div class="how-step">
-      <span class="step-num">—</span>
-      <div>
-        <p class="step-title en-only">ARE YOUR LOTS Q-GRADER VERIFIED?</p>
-        <p class="step-title es-only">¿SUS LOTES ESTÁN VERIFICADOS POR UN Q-GRADER?</p>
-        <p class="step-desc en-block">Yes. Every lot we offer is cupped by a certified Q-grader before export. We provide the full cupping report with each lot — SCA scores, flavor descriptors, and process notes. Traceability includes farm-level documentation and producer profile.</p>
-        <p class="step-desc es-block">Sí. Cada lote que ofrecemos es catado por un Q-grader certificado antes de la exportación. Proveemos el reporte completo de catación con cada lote — puntajes SCA, descriptores de sabor y notas de proceso. La trazabilidad incluye documentación a nivel de finca y perfil del productor.</p>
-      </div>
+      <a class="lot-item" href="/lotes/centroamericano">
+        <div class="lot-item-left">
+          <span class="lot-process">Natural · Centroamericano</span>
+          <span class="lot-name">CENTROAMERICANO</span>
+        </div>
+        <div class="lot-item-right">
+          <span class="lot-altitude">1300</span>
+          <span class="lot-alt-lbl">msnm</span>
+          <span class="lot-arrow">→</span>
+        </div>
+      </a>
     </div>
+  </div>
 
+</section>
+
+<!-- STATEMENT -->
+<section class="statement-section">
+  <p class="statement-label en-only">What makes us different</p>
+  <p class="statement-label es-only">Por qué COFI</p>
+
+  <div class="statement-content">
+    <p class="statement-text en-block">
+      "I don't sell Costa Rican coffee. I sell Lica Torres's coffee — at 1,800 meters, White Honey, 2025 harvest. And your customers will know exactly whose land it came from."
+    </p>
+    <p class="statement-text es-block">
+      "No vendo café de Costa Rica. Vendo el café de Lica Torres — a 1,800 metros, White Honey, cosecha 2025. Y tus clientes sabrán exactamente de qué tierra viene."
+    </p>
+
+    <ul class="statement-bullets">
+      <li class="en-only">Born and raised in Sabalito — direct access no external broker has</li>
+      <li class="es-only">Nacido en Sabalito — acceso directo que ningún intermediario externo tiene</li>
+      <li class="en-only">Technology background — full traceability documentation per lot</li>
+      <li class="es-only">Perfil tecnológico — documentación de trazabilidad completa por lote</li>
+      <li class="en-only">Every lot Q-grader cupped before export — no surprises in the cup</li>
+      <li class="es-only">Cada lote catado por Q-grader antes de exportar — sin sorpresas en la taza</li>
+      <li class="en-only">Same producers every season — consistency your customers can rely on</li>
+      <li class="es-only">Mismos productores cada temporada — consistencia en la que tus clientes pueden confiar</li>
+    </ul>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section class="contact-section" id="contact">
   <div>
-    <p class="section-eyebrow en-only">Get in touch</p>
-    <p class="section-eyebrow es-only">Contacto</p>
+    <p class="contact-eyebrow en-only">Get in touch</p>
+    <p class="contact-eyebrow es-only">Contacto</p>
     <h2 class="contact-heading en-only">REQUEST<br>A SAMPLE</h2>
-    <h2 class="contact-heading es-only">SOLICITÁ<br>UNA MUESTRA</h2>
-    <p class="contact-sub en-block">Send us a message and we'll get back to you within 48 hours with available lots and shipping details.</p>
-    <p class="contact-sub es-block">Escribinos y te respondemos en menos de 48 horas con lotes disponibles y detalles de envío.</p>
+    <h2 class="contact-heading es-only">PEDÍ<br>UNA MUESTRA</h2>
+    <p class="contact-sub en-block">Send us a message. We'll get back within 48 hours with available lots and shipping details. No minimum commitment — you taste first, then decide.</p>
+    <p class="contact-sub es-block">Escribinos. Te respondemos en menos de 48 horas con lotes disponibles y detalles de envío. Sin compromiso mínimo — primero probás, luego decidís.</p>
   </div>
 
   <form class="contact-form" name="contact" method="POST" data-netlify="true" onsubmit="handleSubmit(event)">
@@ -1092,18 +1164,16 @@ footer {
 <footer>
   <div>
     <p class="footer-logo">COFI<br>TRADERS</p>
-    <p class="footer-tagline en-block">Connecting Costa Rican producers with the world.</p>
-    <p class="footer-tagline es-block">Conectando productores costarricenses con el mundo.</p>
+    <p class="footer-tagline en-block">Sabalito, Coto Brus · Costa Rica</p>
+    <p class="footer-tagline es-block">Sabalito, Coto Brus · Costa Rica</p>
+    <p class="footer-copy">© 2025 COFI TRADERS · cofi.cr</p>
   </div>
   <nav class="footer-nav">
-    <a href="#catalog" class="en-only">Catalog</a>
-    <a href="#catalog" class="es-only">Catálogo</a>
-    <a href="#how" class="en-only">How it works</a>
-    <a href="#how" class="es-only">Cómo funciona</a>
-    <a href="#contact" class="en-only">Contact</a>
-    <a href="#contact" class="es-only">Contacto</a>
+    <a href="#producers" class="en-only">Producers</a>
+    <a href="#producers" class="es-only">Productores</a>
+    <a href="#contact" class="en-only">Request a sample</a>
+    <a href="#contact" class="es-only">Pedir muestra</a>
   </nav>
-  <p class="footer-copy">© 2025 COFI TRADERS · cofi.cr · Costa Rica</p>
 </footer>
 
 <script>
@@ -1140,12 +1210,13 @@ function handleSubmit(e) {
     body: new URLSearchParams(new FormData(form)).toString()
   })
   .then(() => {
-    btn.innerHTML = '<span>✓ Sent</span><span style="font-size:.8rem">→</span>';
-    btn.style.background = '#1a1a1a';
+    btn.innerHTML = '<span>✓ Sent →</span>';
+    btn.style.opacity = '0.7';
     form.reset();
     setTimeout(() => {
       btn.innerHTML = '<span class="en-only">Send request</span><span class="es-only">Enviar solicitud</span>';
       btn.disabled = false;
+      btn.style.opacity = '';
     }, 4000);
   })
   .catch(() => {
