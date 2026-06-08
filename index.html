@@ -277,8 +277,18 @@ nav {
 .nav-links a:hover { color: var(--black); }
 
 .nav-lang {
+  display: none;
+}
+
+.lang-float {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 200;
   display: flex;
   border: 1px solid var(--black);
+  background: var(--white);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
 }
 
 .lang-btn {
@@ -890,12 +900,14 @@ footer {
       <a href="#contact" class="en-only">Contact</a>
       <a href="#contact" class="es-only">Contacto</a>
     </div>
-    <div class="nav-lang">
-      <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
-      <button class="lang-btn" id="btn-es" onclick="setLang('es')">ES</button>
-    </div>
   </div>
 </nav>
+
+<!-- LANGUAGE TOGGLE (flotante) -->
+<div class="lang-float">
+  <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+  <button class="lang-btn" id="btn-es" onclick="setLang('es')">ES</button>
+</div>
 
 <!-- HERO -->
 <section class="hero">
