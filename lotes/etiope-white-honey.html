@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Etíope 47 · White Honey — COFI TRADERS</title>
+<meta name="description" content="Etíope 47 SL28 White Honey — specialty coffee from Cerro Buena Vista, Brunca, Costa Rica. Jasmine, violet, lemon, mandarin, peach, granadilla, caramel. 1800 masl. Producer: Lica Torres.">
+<link rel="canonical" href="https://cofi.cr/lotes/etiope-white-honey">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --black: #0A0A0A; --white: #F8F6F2; --mid: #888888; --font-display: 'Bebas Neue', sans-serif; --font-serif: 'Cormorant Garamond', serif; --font-mono: 'DM Mono', monospace; }
+html { scroll-behavior: smooth; }
+body { background: var(--white); color: var(--black); font-family: var(--font-serif); -webkit-font-smoothing: antialiased; }
+.es-only { display: none; }
+body.es .en-only { display: none; }
+body.es .es-only { display: inline; }
+body.es .en-block { display: none; }
+body.es .es-block { display: block; }
+.es-block { display: none; }
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 0 1.5rem; height: 48px; display: flex; justify-content: space-between; align-items: center; background: var(--white); border-bottom: 1px solid var(--black); }
+.nav-logo { font-family: var(--font-display); font-size: 18px; letter-spacing: 0.08em; color: var(--black); text-decoration: none; }
+.nav-right { display: flex; align-items: center; gap: 1rem; }
+.nav-back { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.2em; color: var(--mid); text-decoration: none; text-transform: uppercase; transition: color 0.15s; }
+.nav-back:hover { color: var(--black); }
+.nav-back::before { content: '← '; }
+.nav-lang { display: flex; border: 1px solid var(--black); }
+.lang-btn { font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.15em; padding: 4px 8px; border: none; background: none; color: var(--mid); cursor: pointer; text-transform: uppercase; transition: all 0.15s; }
+.lang-btn.active { background: var(--black); color: var(--white); }
+.hero { padding-top: 48px; min-height: 100svh; display: flex; flex-direction: column; justify-content: space-between; }
+.hero-top { padding: 3rem 1.5rem 2rem; border-bottom: 1px solid var(--black); }
+.lot-id { font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.2em; color: var(--mid); text-transform: uppercase; margin-bottom: 1.5rem; }
+.hero-title { font-family: var(--font-display); font-size: clamp(4rem, 18vw, 12rem); line-height: 0.88; letter-spacing: 0.02em; color: var(--black); }
+.hero-title-sub { font-family: var(--font-display); font-size: clamp(1.4rem, 6vw, 4rem); letter-spacing: 0.3em; color: var(--black); opacity: 0.22; margin-top: 0.3rem; display: block; }
+.hero-process { margin-top: 1.5rem; display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.2em; color: var(--mid); text-transform: uppercase; border: 1px solid rgba(10,10,10,0.2); padding: 5px 12px; }
+.hero-bottom { border-top: 1px solid var(--black); display: grid; grid-template-columns: 1fr 1fr; }
+.hero-stat { padding: 1.25rem 1.5rem; display: flex; flex-direction: column; gap: 5px; border-right: 1px solid var(--black); }
+.hero-stat:nth-child(2n) { border-right: none; }
+.hero-stat:nth-child(3), .hero-stat:nth-child(4) { border-top: 1px solid var(--black); }
+.stat-val { font-family: var(--font-display); font-size: 2rem; letter-spacing: 0.04em; color: var(--black); line-height: 1; }
+.stat-lbl { font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.2em; color: var(--mid); text-transform: uppercase; }
+@media (min-width: 768px) {
+  .hero-top { padding: 4rem 3rem 3rem; }
+  .hero-bottom { grid-template-columns: 1fr 1fr 1fr 1fr; }
+  .hero-stat { padding: 1.5rem 2rem; }
+  .hero-stat:nth-child(2n) { border-right: 1px solid var(--black); }
+  .hero-stat:nth-child(3), .hero-stat:nth-child(4) { border-top: none; }
+  .hero-stat:last-child { border-right: none; }
+}
+.tasting { padding: 3rem 1.5rem; border-bottom: 1px solid var(--black); }
+@media (min-width: 768px) { .tasting { padding: 4rem 3rem; } }
+.section-eyebrow { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.25em; color: var(--mid); text-transform: uppercase; margin-bottom: 1.5rem; }
+.tasting-quote { font-family: var(--font-serif); font-size: clamp(1.2rem, 3vw, 1.7rem); font-weight: 300; font-style: italic; line-height: 1.6; color: var(--black); border-left: 2px solid var(--black); padding-left: 1.5rem; margin-bottom: 2rem; }
+.flavor-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.flavor-tag { font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.15em; padding: 5px 12px; border: 1px solid rgba(10,10,10,0.25); color: var(--black); text-transform: uppercase; }
+.lot-data { border-bottom: 1px solid var(--black); }
+.lot-data-header { padding: 2rem 1.5rem 1rem; }
+@media (min-width: 768px) { .lot-data-header { padding: 2.5rem 3rem 1rem; } }
+.data-heading { font-family: var(--font-display); font-size: clamp(2rem, 6vw, 3.5rem); letter-spacing: 0.06em; color: var(--black); line-height: 1; }
+.data-grid { display: flex; flex-direction: column; }
+.data-row { display: grid; grid-template-columns: 1fr 1fr; padding: 1rem 1.5rem; border-top: 1px solid rgba(10,10,10,0.1); align-items: baseline; }
+@media (min-width: 768px) { .data-row { padding: 1rem 3rem; } }
+.data-key { font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.2em; color: var(--mid); text-transform: uppercase; }
+.data-val { font-family: var(--font-serif); font-size: 1rem; font-weight: 300; color: var(--black); text-align: right; }
+.producer { padding: 3rem 1.5rem; border-bottom: 1px solid var(--black); }
+@media (min-width: 768px) { .producer { padding: 4rem 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; } }
+.producer-name { font-family: var(--font-display); font-size: clamp(3rem, 10vw, 6rem); letter-spacing: 0.04em; color: var(--black); line-height: 0.9; margin-bottom: 1rem; }
+.producer-desc { font-family: var(--font-serif); font-size: 1rem; font-weight: 300; font-style: italic; line-height: 1.75; color: var(--mid); }
+.finca-rows { display: flex; flex-direction: column; margin-top: 2rem; }
+@media (min-width: 768px) { .finca-rows { margin-top: 0; } }
+.finca-row { display: flex; justify-content: space-between; align-items: baseline; padding: 0.9rem 0; border-top: 1px solid rgba(10,10,10,0.1); }
+.finca-row:last-child { border-bottom: 1px solid rgba(10,10,10,0.1); }
+.finca-key { font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.2em; color: var(--mid); text-transform: uppercase; }
+.finca-val { font-family: var(--font-serif); font-size: 0.95rem; font-weight: 300; color: var(--black); }
+.qr-section { padding: 3rem 1.5rem; border-bottom: 1px solid var(--black); display: flex; gap: 2.5rem; align-items: center; flex-wrap: wrap; }
+@media (min-width: 768px) { .qr-section { padding: 3rem; } }
+.qr-box { width: 112px; height: 112px; border: 1px solid var(--black); display: flex; align-items: center; justify-content: center; flex-shrink: 0; padding: 8px; }
+.qr-title { font-family: var(--font-display); font-size: 1.5rem; letter-spacing: 0.06em; color: var(--black); margin-bottom: 0.4rem; }
+.qr-desc { font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.15em; color: var(--mid); text-transform: uppercase; line-height: 1.8; }
+footer { padding: 2rem 1.5rem; display: flex; flex-direction: column; gap: 1.5rem; }
+@media (min-width: 768px) { footer { padding: 2.5rem 3rem; flex-direction: row; justify-content: space-between; align-items: flex-end; } }
+.footer-logo { font-family: var(--font-display); font-size: 2.2rem; letter-spacing: 0.06em; color: var(--black); line-height: 0.9; }
+.footer-tagline { font-family: var(--font-serif); font-size: 0.85rem; font-style: italic; font-weight: 300; color: var(--mid); margin-top: 0.4rem; }
+.footer-copy { font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.15em; color: var(--mid); text-transform: uppercase; align-self: flex-end; }
+</style>
+</head>
+<body id="body">
+<nav>
+  <a href="/" class="nav-logo">COFI TRADERS</a>
+  <div class="nav-right">
+    <a href="/#catalog" class="nav-back en-only">Catalog</a>
+    <a href="/#catalog" class="nav-back es-only">Catálogo</a>
+    <div class="nav-lang">
+      <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" id="btn-es" onclick="setLang('es')">ES</button>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-top">
+    <p class="lot-id">LOT #CBV-E47-WH-2025 · Cerro Buena Vista · Brunca</p>
+    <h1 class="hero-title">ETÍOPE 47<span class="hero-title-sub">WHITE HONEY</span></h1>
+    <span class="hero-process en-only">White Honey process · SL28</span>
+    <span class="hero-process es-only">Proceso White Honey · SL28</span>
+  </div>
+  <div class="hero-bottom">
+    <div class="hero-stat"><span class="stat-val">1800</span><span class="stat-lbl en-only">Altitude (masl)</span><span class="stat-lbl es-only">Altitud (msnm)</span></div>
+    <div class="hero-stat"><span class="stat-val">SL28</span><span class="stat-lbl en-only">Variety</span><span class="stat-lbl es-only">Variedad</span></div>
+    <div class="hero-stat"><span class="stat-val">BRUNCA</span><span class="stat-lbl en-only">Region</span><span class="stat-lbl es-only">Región</span></div>
+    <div class="hero-stat"><span class="stat-val">2025</span><span class="stat-lbl en-only">Harvest</span><span class="stat-lbl es-only">Cosecha</span></div>
+  </div>
+</section>
+
+<div class="tasting">
+  <p class="section-eyebrow en-only">Sensory profile</p>
+  <p class="section-eyebrow es-only">Perfil sensorial</p>
+  <p class="tasting-quote en-block">Floral and citrus profile, with jasmine, violet, lemon and mandarin, accompanied by sweet fruits like peach and granadilla, and a finish of caramel and sugarcane.</p>
+  <p class="tasting-quote es-block">Perfil floral y cítrico, con jazmín, violeta, limón y mandarina, acompañado de frutas dulces como durazno y granadilla, y un final de caramelo y tapa de dulce.</p>
+  <div class="flavor-tags">
+    <span class="flavor-tag en-only">Jasmine</span><span class="flavor-tag es-only">Jazmín</span>
+    <span class="flavor-tag en-only">Violet</span><span class="flavor-tag es-only">Violeta</span>
+    <span class="flavor-tag en-only">Lemon</span><span class="flavor-tag es-only">Limón</span>
+    <span class="flavor-tag en-only">Mandarin</span><span class="flavor-tag es-only">Mandarina</span>
+    <span class="flavor-tag en-only">Peach</span><span class="flavor-tag es-only">Durazno</span>
+    <span class="flavor-tag">Granadilla</span>
+    <span class="flavor-tag en-only">Caramel</span><span class="flavor-tag es-only">Caramelo</span>
+    <span class="flavor-tag">Tapa de dulce</span>
+  </div>
+</div>
+
+<div class="lot-data">
+  <div class="lot-data-header">
+    <p class="section-eyebrow en-only">Lot details</p>
+    <p class="section-eyebrow es-only">Datos del lote</p>
+    <h2 class="data-heading en-only">TECHNICAL<br>DATA</h2>
+    <h2 class="data-heading es-only">DATOS<br>TÉCNICOS</h2>
+  </div>
+  <div class="data-grid">
+    <div class="data-row"><span class="data-key en-only">Variety</span><span class="data-key es-only">Variedad</span><span class="data-val">Etíope 47 (SL28)</span></div>
+    <div class="data-row"><span class="data-key en-only">Process</span><span class="data-key es-only">Proceso</span><span class="data-val">White Honey</span></div>
+    <div class="data-row"><span class="data-key en-only">Altitude</span><span class="data-key es-only">Altitud</span><span class="data-val">1,800 masl</span></div>
+    <div class="data-row"><span class="data-key en-only">Region</span><span class="data-key es-only">Región</span><span class="data-val">Brunca</span></div>
+    <div class="data-row"><span class="data-key en-only">Zone</span><span class="data-key es-only">Zona</span><span class="data-val">Rivas, Pérez Zeledón</span></div>
+    <div class="data-row"><span class="data-key en-only">Micro-beneficio</span><span class="data-key es-only">Microbeneficio</span><span class="data-val">Cerro Buena Vista</span></div>
+    <div class="data-row"><span class="data-key en-only">Country</span><span class="data-key es-only">País</span><span class="data-val">Costa Rica</span></div>
+    <div class="data-row"><span class="data-key en-only">Harvest</span><span class="data-key es-only">Cosecha</span><span class="data-val">2025</span></div>
+  </div>
+</div>
+
+<div class="producer">
+  <div>
+    <p class="section-eyebrow en-only">The producer</p>
+    <p class="section-eyebrow es-only">El productor</p>
+    <h2 class="producer-name">LICA<br>TORRES</h2>
+    <p class="producer-desc en-block">Producer at Cerro Buena Vista micro-beneficio, located in Rivas, Pérez Zeledón, in Costa Rica's Brunca region. Her coffees are defined by experimental processes that precisely express the terroir of the Pacific South slopes.</p>
+    <p class="producer-desc es-block">Productora en Cerro Buena Vista, microbeneficio ubicado en Rivas, Pérez Zeledón, en la región Brunca de Costa Rica. Sus cafés se caracterizan por procesos experimentales que expresan con precisión el terroir de las laderas del Pacífico Sur.</p>
+  </div>
+  <div class="finca-rows">
+    <div class="finca-row"><span class="finca-key en-only">Micro-beneficio</span><span class="finca-key es-only">Microbeneficio</span><span class="finca-val">Cerro Buena Vista</span></div>
+    <div class="finca-row"><span class="finca-key en-only">Region</span><span class="finca-key es-only">Región</span><span class="finca-val">Brunca</span></div>
+    <div class="finca-row"><span class="finca-key en-only">Zone</span><span class="finca-key es-only">Zona</span><span class="finca-val">Rivas, Pérez Zeledón</span></div>
+    <div class="finca-row"><span class="finca-key en-only">Altitude</span><span class="finca-key es-only">Altitud</span><span class="finca-val">1,800 msnm</span></div>
+    <div class="finca-row"><span class="finca-key en-only">Curator</span><span class="finca-key es-only">Curador</span><span class="finca-val">COFI TRADERS</span></div>
+  </div>
+</div>
+
+<div class="qr-section">
+  <div class="qr-box"><div id="qr-code"></div></div>
+  <div>
+    <p class="qr-title en-only">FULL TRACEABILITY</p>
+    <p class="qr-title es-only">TRAZABILIDAD COMPLETA</p>
+    <p class="qr-desc en-only">Scan to access producer profile,<br>farm photos and Q-grader cupping data.</p>
+    <p class="qr-desc es-only">Escanear para acceder al perfil del productor,<br>fotos de finca y datos de catación Q-grader.</p>
+  </div>
+</div>
+
+<footer>
+  <div>
+    <p class="footer-logo">COFI<br>TRADERS</p>
+    <p class="footer-tagline en-block">Connecting Costa Rican producers with the world.</p>
+    <p class="footer-tagline es-block">Conectando productores costarricenses con el mundo.</p>
+  </div>
+  <p class="footer-copy">© 2025 COFI TRADERS · cofi.cr · Costa Rica</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script>
+function setLang(lang) {
+  const body = document.getElementById('body');
+  lang === 'es' ? body.classList.add('es') : body.classList.remove('es');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+  localStorage.setItem('cofi-lang', lang);
+}
+const saved = localStorage.getItem('cofi-lang');
+if (saved) { setLang(saved); } else {
+  const b = navigator.language || navigator.userLanguage || '';
+  setLang(b.toLowerCase().startsWith('es') ? 'es' : 'en');
+}
+new QRCode(document.getElementById("qr-code"), {
+  text: "https://cofi.cr/lotes/etiope-white-honey",
+  width: 96, height: 96, colorDark: "#0A0A0A", colorLight: "#F8F6F2",
+  correctLevel: QRCode.CorrectLevel.M
+});
+</script>
+</body>
+</html>
