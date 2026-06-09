@@ -869,7 +869,8 @@ footer {
 }
 .lot-hero-top {
   padding: 3rem 1.5rem 2rem;
-  border-bottom: 1px solid var(--black);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  background: var(--process-color);
 }
 @media (min-width: 768px) {
   .lot-hero-top { padding: 4rem 3rem 3rem; }
@@ -878,7 +879,8 @@ footer {
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.2em;
-  color: var(--mid);
+  color: var(--process-text);
+  opacity: 0.6;
   text-transform: uppercase;
   margin-bottom: 1.5rem;
 }
@@ -887,12 +889,13 @@ footer {
   font-size: clamp(4rem, 18vw, 12rem);
   line-height: 0.88;
   letter-spacing: 0.02em;
+  color: var(--process-text);
 }
 .lot-title-sub {
   font-family: var(--font-display);
   font-size: clamp(1.4rem, 6vw, 4rem);
   letter-spacing: 0.3em;
-  opacity: 0.22;
+  opacity: 0.3;
   margin-top: 0.3rem;
   display: block;
 }
@@ -904,10 +907,11 @@ footer {
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.2em;
-  color: var(--mid);
+  color: var(--process-text);
   text-transform: uppercase;
-  border: 1px solid rgba(10,10,10,0.2);
+  border: 1px solid rgba(255,255,255,0.35);
   padding: 5px 12px;
+  background: rgba(255,255,255,0.12);
 }
 .lot-stats {
   border-top: 1px solid var(--black);
