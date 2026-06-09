@@ -847,6 +847,17 @@ footer {
 /* ─── SECTION GUTTER VAR ─── */
 :root { --gutter: clamp(1.25rem, 5vw, 4rem); }
 
+/* ─── PROCESS COLORS ─── */
+:root {
+  --process-color: var(--black);
+  --process-text: var(--white);
+}
+.process-anaerobic  { --process-color: #7654B0; --process-text: #F8F6F2; }
+.process-white-honey{ --process-color: #E03D35; --process-text: #F8F6F2; }
+.process-honey      { --process-color: #C9991A; --process-text: #0A0A0A; }
+.process-natural    { --process-color: #5A9E3A; --process-text: #F8F6F2; }
+.process-washed     { --process-color: #0A0A0A; --process-text: #F8F6F2; }
+
 /* ─── LOT PAGES ─── */
 .lot-hero {
   padding-top: var(--nav-h);
@@ -902,6 +913,8 @@ footer {
   border-top: 1px solid var(--black);
   display: grid;
   grid-template-columns: 1fr 1fr;
+  background: var(--process-color);
+  color: var(--process-text);
 }
 @media (min-width: 768px) {
   .lot-stats { grid-template-columns: 1fr 1fr 1fr 1fr; }
@@ -911,14 +924,14 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  border-right: 1px solid var(--black);
+  border-right: 1px solid rgba(255,255,255,0.2);
 }
 .lot-stat:nth-child(2n) { border-right: none; }
 .lot-stat:nth-child(3),
-.lot-stat:nth-child(4) { border-top: 1px solid var(--black); }
+.lot-stat:nth-child(4) { border-top: 1px solid rgba(255,255,255,0.2); }
 @media (min-width: 768px) {
   .lot-stat { padding: 1.5rem 2rem; }
-  .lot-stat:nth-child(2n) { border-right: 1px solid var(--black); }
+  .lot-stat:nth-child(2n) { border-right: 1px solid rgba(255,255,255,0.2); }
   .lot-stat:nth-child(3),
   .lot-stat:nth-child(4) { border-top: none; }
   .lot-stat:last-child { border-right: none; }
@@ -928,12 +941,14 @@ footer {
   font-size: 2rem;
   letter-spacing: 0.04em;
   line-height: 1;
+  color: var(--process-text);
 }
 .lot-stat-lbl {
   font-family: var(--font-mono);
   font-size: 10px;
   letter-spacing: 0.2em;
-  color: var(--mid);
+  color: var(--process-text);
+  opacity: 0.65;
   text-transform: uppercase;
 }
 
