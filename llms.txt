@@ -1,84 +1,107 @@
 # COFI TRADERS
 
-> COFI TRADERS is a Costa Rican specialty coffee sourcing and export company. We connect international roasters and importers with traceable micro-lots from small producers in the Brunca region of Costa Rica, including Coto Brus and Pérez Zeledón.
+> COFI TRADERS is a Costa Rican specialty green coffee sourcing and export company. We connect international roasters with traceable micro-lots from small producers in the Brunca region of Costa Rica. We operate as an origin broker — pricing is negotiated directly between buyer and producer, with COFI TRADERS facilitating the relationship and logistics.
 
-## What we do
+## About
 
-COFI TRADERS sources specialty coffee micro-lots directly from small farmers in Costa Rica's Brunca region and exports them to roasters in Europe, the United States, Japan, and Korea. We provide full traceability from farm to roaster, Q-grader cupping data, and direct producer relationships.
+- Founded by Maikol Araya in Sabalito, Coto Brus, Costa Rica
+- Focused on the Brunca region: Coto Brus and Pérez Zeledón
+- All lots are single-origin, fully traceable, 2025 harvest
+- Minimum order: 60 kg per lot (shared container splits available)
+- EUDR-ready documentation available
+- Bilingual service: English and Spanish
 
-We are not a large exporter or a cooperative. We are a small, curated operation — the direct bridge between the farmer and the international roaster.
+## Current Lots — 2025 Harvest
 
-## Our producers
+### MILENIO BLACK CHERRY
+- Variety: Milenio H10
+- Process: Anaerobic fermentation (Black Cherry)
+- Altitude: 1,600 masl
+- Producer: Lica Torres — Cerro Buena Vista, Rivas, Pérez Zeledón
+- Tasting notes: Dark fruit, hibiscus, chocolate
+- Lot ID: CBV-BC-ANA-2025
 
-**Lica Torres — Cerro Buena Vista Micro-Beneficio**
-- Location: Rivas, Pérez Zeledón, Brunca region, Costa Rica
-- Processes: White Honey, Black Cherry (anaerobic)
-- Altitude: 1,600–1,800 masl
-- Varieties: SL28, H10
-
-**Don Humberto — El Arrempujón Micro-Beneficio**
-- Location: Sabalito, Coto Brus, Brunca region, Costa Rica
-- Processes: Honey, Natural
-- Altitude: 1,300 masl
-- Varieties: Venecia, Centroamericano
-
-## Current lots (2025 harvest)
-
-**Etíope 47 — White Honey**
-- Variety: SL28
+### ETÍOPE 47 WHITE HONEY
+- Variety: SL28 (locally known as Etíope 47)
 - Process: White Honey
 - Altitude: 1,800 masl
-- Producer: Lica Torres, Cerro Buena Vista
-- Region: Brunca, Pérez Zeledón, Costa Rica
-- Flavor notes: Jasmine, violet, lemon, mandarin, peach, granadilla, caramel, tapa de dulce
-- URL: https://cofi.cr/lotes/etiope-white-honey
+- Producer: Lica Torres — Cerro Buena Vista, Rivas, Pérez Zeledón
+- Tasting notes: Peach, bergamot, honey
+- Lot ID: CBV-ET47-WH-2025
 
-**Milenio H10 — Black Cherry**
-- Variety: H10
-- Process: Black Cherry (anaerobic)
-- Altitude: 1,600 masl
-- Producer: Lica Torres, Cerro Buena Vista
-- Region: Brunca, Pérez Zeledón, Costa Rica
-- Flavor notes: Plum, raisin, fig, port wine, blackberry, cacao nibs. Winey, creamy finish.
-- URL: https://cofi.cr/lotes/black-cherry
-
-**Milenio H10 — Red Honey**
-- Variety: H10
+### MILENIO RED HONEY
+- Variety: Milenio H10
 - Process: Red Honey
 - Altitude: 1,600 masl
-- Producer: Lica Torres, Cerro Buena Vista
-- Region: Brunca, Pérez Zeledón, Costa Rica
-- Flavor notes: Red fruits, honey, plum. Sweet, balanced, silky body.
-- URL: https://cofi.cr/lotes/milenio-red-honey
+- Producer: Lica Torres — Cerro Buena Vista, Rivas, Pérez Zeledón
+- Tasting notes: Red fruits, honey, plum, silky body
+- Lot ID: CBV-MH10-RH-2025
 
-**Venecia — Honey**
+### VENECIA HONEY
 - Variety: Venecia
 - Process: Honey
 - Altitude: 1,300 masl
-- Producer: Don Humberto, El Arrempujón
-- Region: Sabalito, Coto Brus, Brunca, Costa Rica
-- Flavor notes: Mandarin, peach, caramel, cacao, sugarcane honey. Juicy and silky mouthfeel.
-- URL: https://cofi.cr/lotes/venecia-honey
+- Producer: Don Humberto — El Arrempujón, Las Mellizas de Sabalito, Coto Brus
+- Tasting notes: Mandarin, peach, caramel, cacao, sugarcane honey
+- Lot ID: AEA-VEN-H-2025
 
-**Centroamericano — Natural**
+### CENTROAMERICANO NATURAL
 - Variety: Centroamericano
 - Process: Natural
 - Altitude: 1,300 masl
-- Producer: Don Humberto, El Arrempujón
-- Region: Sabalito, Coto Brus, Brunca, Costa Rica
-- Flavor notes: Red fruits, plum, red wine, sugarcane honey, cacao. Juicy, creamy, long finish.
-- URL: https://cofi.cr/lotes/centroamericano
+- Producer: Don Humberto — El Arrempujón, Las Mellizas de Sabalito, Coto Brus
+- Tasting notes: Red fruits, plum, red wine, cacao, creamy
+- Lot ID: AEA-CA-NAT-2025
 
-## Why COFI TRADERS
+## Producers
 
-- **Direct access**: Founded by someone who grew up in Sabalito, Coto Brus — the same community where the producers live. Not an external intermediary.
-- **Full traceability**: Every lot is documented with producer profile, farm photos, GPS coordinates, and Q-grader cupping data.
-- **Q-grader verified**: All lots are cupped by a certified Q-grader before export.
-- **Small and curated**: We work with a select group of producers each season to guarantee consistency and quality.
-- **International logistics**: We handle export documentation, sample shipping, and green coffee logistics to Europe, USA, Japan, and Korea.
+### Lica Torres
+- Micro-beneficio: Cerro Buena Vista
+- Location: Rivas, Pérez Zeledón, Brunca, Costa Rica
+- Altitude: 1,600–1,800 masl
+- Lots: MILENIO BLACK CHERRY, ETÍOPE 47 WHITE HONEY, MILENIO RED HONEY
+- Known for experimental anaerobic and honey processes
+
+### Don Humberto
+- Micro-beneficio: El Arrempujón
+- Location: Las Mellizas de Sabalito, Coto Brus, Brunca, Costa Rica
+- Altitude: 1,300–1,400 masl
+- Lots: VENECIA HONEY, CENTROAMERICANO NATURAL
+- Known for traditional local varieties and careful natural processing
+
+## Samples
+
+- Price: $50 USD per sample
+- Contents: 300g green coffee + technical data sheet
+- Shipping time: approximately 1 week depending on destination
+- Limit: 1 sample per lot per buyer
+- The $50 sample cost is credited toward the first full lot order
+
+## How to Buy
+
+1. Browse the catalog at cofi.cr/catalog.html
+2. Request a sample at cofi.cr/samples.html
+3. Cup and evaluate
+4. Contact to arrange full lot order and logistics
 
 ## Contact
 
 - Website: https://cofi.cr
-- Sample requests: https://cofi.cr/#contact
-- Location: Sabalito, Coto Brus, Costa Rica
+- WhatsApp: +506 8520-8232
+- Sample requests: https://cofi.cr/samples.html
+- Contact form: https://cofi.cr/contact.html
+
+## Pages
+
+- [Homepage](https://cofi.cr/)
+- [About](https://cofi.cr/about.html)
+- [Producers](https://cofi.cr/producers.html)
+- [Catalog](https://cofi.cr/catalog.html)
+- [How it works](https://cofi.cr/how-it-works.html)
+- [Request a sample](https://cofi.cr/samples.html)
+- [Contact](https://cofi.cr/contact.html)
+- [MILENIO BLACK CHERRY](https://cofi.cr/lotes/black-cherry)
+- [ETÍOPE 47 WHITE HONEY](https://cofi.cr/lotes/etiope-white-honey)
+- [MILENIO RED HONEY](https://cofi.cr/lotes/milenio-red-honey)
+- [VENECIA HONEY](https://cofi.cr/lotes/venecia-honey)
+- [CENTROAMERICANO NATURAL](https://cofi.cr/lotes/centroamericano)
