@@ -381,12 +381,12 @@ body > nav {
 
 @media (min-width: 768px) { .lot-item { padding: 1.5rem 3rem; } }
 
-.lot-item:hover { background: var(--black); }
+.lot-item:hover { background: var(--lot-color, var(--black)); }
 .lot-item:hover .lot-process,
 .lot-item:hover .lot-name,
 .lot-item:hover .lot-altitude,
 .lot-item:hover .lot-alt-lbl,
-.lot-item:hover .lot-arrow { color: var(--white); }
+.lot-item:hover .lot-arrow { color: var(--lot-color-text, var(--white)); }
 
 .lot-item-left { display: flex; flex-direction: column; gap: 4px; }
 
