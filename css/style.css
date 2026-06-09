@@ -990,11 +990,11 @@ footer {
 .data-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 1rem 1.5rem;
+  padding: 0.6rem 1.5rem;
   border-top: 1px solid rgba(10,10,10,0.1);
   align-items: baseline;
 }
-@media (min-width: 768px) { .data-row { padding: 1rem 3rem; } }
+@media (min-width: 768px) { .data-row { padding: 0.6rem 3rem; } }
 .data-key {
   font-family: var(--font-mono);
   font-size: 11px;
