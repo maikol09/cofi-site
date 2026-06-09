@@ -861,10 +861,8 @@ footer {
 /* ─── LOT PAGES ─── */
 .lot-hero {
   padding-top: var(--nav-h);
-  min-height: 100svh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   border-bottom: 1px solid var(--black);
 }
 .lot-hero-top {
