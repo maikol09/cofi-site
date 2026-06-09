@@ -289,7 +289,7 @@
       <a href="/catalog.html" class="btn btn-primary">
         <span class="en-only">See the lots</span><span class="es-only">Ver los lotes</span> →
       </a>
-      <a href="/contact.html" class="btn btn-outline">
+      <a href="/samples.html" class="btn btn-outline">
         <span class="en-only">Request a sample</span><span class="es-only">Pedir muestra</span>
       </a>
     </div>
@@ -452,6 +452,26 @@
   </div>
 </section>
 
+<!-- NOTIFY -->
+<section style="border-bottom:1px solid var(--black);padding:3rem 1.5rem;">
+  <div style="max-width:560px;">
+    <p class="eyebrow en-only" style="margin-bottom:0.75rem;">Stay in the loop</p>
+    <p class="eyebrow es-only" style="margin-bottom:0.75rem;">Mantenete informado</p>
+    <p class="serif-body en-block" style="margin-bottom:0;">New lots launch once a year. Leave your email and we'll notify you when the 2026 harvest is ready.</p>
+    <p class="serif-body es-block" style="margin-bottom:0;">Los lotes salen una vez al año. Dejá tu email y te avisamos cuando la cosecha 2026 esté lista.</p>
+    <form name="notify" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="notify-form" id="notify-form-home">
+      <input type="hidden" name="form-name" value="notify">
+      <input type="hidden" name="bot-field">
+      <input type="email" name="email" placeholder="your@email.com" required>
+      <button type="submit" class="btn btn-primary">
+        <span class="en-only">Notify me →</span>
+        <span class="es-only">Notificarme →</span>
+      </button>
+    </form>
+    <p class="notify-success" id="notify-success-home">✓ <span class="en-only">You're on the list.</span><span class="es-only">Quedaste en la lista.</span></p>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer>
   <div>
@@ -486,5 +506,13 @@
 </div>
 
 <script src="/js/main.js"></script>
+<script>
+document.getElementById('notify-form-home').addEventListener('submit', function(e) {
+  e.preventDefault();
+  fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(new FormData(this)).toString() })
+    .then(() => { this.style.display = 'none'; document.getElementById('notify-success-home').style.display = 'block'; })
+    .catch(() => this.submit());
+});
+</script>
 </body>
 </html>

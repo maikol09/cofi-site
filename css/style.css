@@ -673,6 +673,35 @@ footer {
   box-shadow: 0 2px 12px rgba(0,0,0,0.12);
 }
 
+/* ─── NOTIFY FORM ─── */
+.notify-form {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+.notify-form input[type="email"] {
+  flex: 1;
+  min-width: 200px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  padding: 12px 14px;
+  border: 1px solid var(--black);
+  background: transparent;
+  outline: none;
+  color: var(--black);
+}
+.notify-success {
+  display: none;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-top: 1rem;
+  color: var(--black);
+}
+
 /* ─── INNER PAGE BODY ─── */
 .page-body {
   padding-top: var(--nav-h);
