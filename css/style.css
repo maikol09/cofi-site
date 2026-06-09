@@ -904,10 +904,11 @@ footer {
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.2em;
-  color: var(--mid);
   text-transform: uppercase;
-  border: 1px solid rgba(10,10,10,0.2);
-  padding: 5px 12px;
+  padding: 6px 14px;
+  background: var(--process-color);
+  color: var(--process-text);
+  border: none;
 }
 .lot-stats {
   border-top: 1px solid var(--black);
@@ -956,17 +957,24 @@ footer {
 .lot-tasting {
   padding: 3rem 1.5rem;
   border-bottom: 1px solid var(--black);
+  background: var(--process-color);
+  color: var(--process-text);
 }
 @media (min-width: 768px) { .lot-tasting { padding: 4rem 3rem; } }
+.lot-tasting .eyebrow {
+  color: var(--process-text);
+  opacity: 0.65;
+}
 .tasting-quote {
   font-family: var(--font-serif);
   font-size: clamp(1.1rem, 2.5vw, 1.6rem);
   font-weight: 300;
   font-style: italic;
   line-height: 1.65;
-  border-left: 2px solid var(--black);
+  border-left: 2px solid var(--process-text);
   padding-left: 1.5rem;
   margin-bottom: 2rem;
+  color: var(--process-text);
 }
 .flavor-tags { display: flex; flex-wrap: wrap; gap: 6px; }
 .flavor-tag {
@@ -974,8 +982,9 @@ footer {
   font-size: 11px;
   letter-spacing: 0.15em;
   padding: 5px 12px;
-  border: 1px solid rgba(10,10,10,0.25);
+  border: 1px solid rgba(255,255,255,0.35);
   text-transform: uppercase;
+  color: var(--process-text);
 }
 
 /* Lot data table */
