@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fresh Roasted — COFI TRADERS · Costa Rica</title>
+<meta name="description" content="COFI TRADERS roasts to order. Same micro-lots we export to the world — roasted fresh in Costa Rica. Order via WhatsApp.">
+<link rel="canonical" href="https://cofi.cr/tostado">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="stylesheet" href="/css/style.css">
+<meta property="og:title" content="Fresh Roasted — COFI TRADERS · Costa Rica">
+<meta property="og:description" content="The same lots we export to roasters in Tokyo — roasted fresh, sold in Costa Rica. Order via WhatsApp.">
+<meta property="og:image" content="https://cofi.cr/img/lica-torres.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="800">
+<style>
+/* ─── TOSTADO HERO ─── */
+.tostado-hero {
+  background: var(--black);
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: calc(var(--nav-h) + 3rem) 1.5rem 3rem;
+  border-bottom: 3px solid #C9991A;
+  position: relative;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .tostado-hero { padding: calc(var(--nav-h) + 5rem) 3rem 4rem; }
+}
+.tostado-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('/img/lica-torres.jpg');
+  background-size: cover;
+  background-position: center 30%;
+  filter: grayscale(100%);
+  opacity: 0.12;
+  z-index: 0;
+}
+.tostado-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 820px;
+}
+.tostado-hero-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  color: #C9991A;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+.tostado-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 16vw, 12rem);
+  letter-spacing: 0.03em;
+  line-height: 0.88;
+  color: #F8F6F2;
+}
+.tostado-hero-sub {
+  font-family: var(--font-serif);
+  font-size: clamp(1.1rem, 3vw, 1.7rem);
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.5;
+  color: rgba(248,246,242,0.7);
+  margin-top: 2rem;
+  max-width: 560px;
+}
+
+/* ─── TOSTADO STATS ─── */
+.tostado-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid rgba(248,246,242,0.15);
+  background: var(--black);
+}
+@media (min-width: 768px) {
+  .tostado-stats { grid-template-columns: repeat(4, 1fr); }
+}
+.tostado-stat {
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-right: 1px solid rgba(248,246,242,0.1);
+}
+.tostado-stat:nth-child(2n) { border-right: none; }
+.tostado-stat:nth-child(3),
+.tostado-stat:nth-child(4) { border-top: 1px solid rgba(248,246,242,0.1); }
+@media (min-width: 768px) {
+  .tostado-stat { padding: 1.5rem 2rem; }
+  .tostado-stat:nth-child(2n) { border-right: 1px solid rgba(248,246,242,0.1); }
+  .tostado-stat:nth-child(3),
+  .tostado-stat:nth-child(4) { border-top: none; }
+  .tostado-stat:last-child { border-right: none; }
+}
+.tostado-stat-val {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  letter-spacing: 0.04em;
+  color: #C9991A;
+  line-height: 1;
+}
+.tostado-stat-lbl {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: rgba(248,246,242,0.4);
+  text-transform: uppercase;
+}
+
+/* ─── TOSTADO LOT CARD ─── */
+.tostado-lot {
+  display: grid;
+  padding: 2rem 1.5rem;
+  border-bottom: 1px solid rgba(10,10,10,0.1);
+  gap: 1rem;
+  text-decoration: none;
+  color: var(--black);
+  transition: background 0.15s;
+}
+@media (min-width: 768px) {
+  .tostado-lot {
+    grid-template-columns: 3rem 1fr auto;
+    align-items: center;
+    padding: 1.75rem 3rem;
+    gap: 2rem;
+  }
+}
+.tostado-lot:hover { background: var(--warm); }
+.tostado-lot-num {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  letter-spacing: 0.06em;
+  color: var(--mid);
+  line-height: 1;
+}
+.tostado-lot-name {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  letter-spacing: 0.04em;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.tostado-lot-detail {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  color: var(--mid);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.tostado-lot-notes {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--mid);
+}
+.tostado-lot-tag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  padding: 4px 10px;
+  border: 1px solid var(--lot-color, var(--black));
+  color: var(--lot-color, var(--black));
+  text-transform: uppercase;
+  white-space: nowrap;
+  align-self: center;
+  flex-shrink: 0;
+}
+
+/* ─── HOW TO ORDER ─── */
+.order-step {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 1.25rem;
+  padding: 1.75rem 0;
+  border-bottom: 1px solid rgba(10,10,10,0.1);
+  align-items: start;
+}
+.order-step-num {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: var(--mid);
+  line-height: 1;
+}
+.order-step-title {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.order-step-desc {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--mid);
+}
+
+/* ─── DARK SECTION override ─── */
+.tostado-dark-section {
+  background: var(--black);
+  border-bottom: 1px solid rgba(248,246,242,0.1);
+  padding: 4rem 1.5rem;
+  color: var(--white);
+}
+@media (min-width: 768px) {
+  .tostado-dark-section { padding: 6rem 3rem; }
+}
+.tostado-dark-section .eyebrow { color: rgba(248,246,242,0.35); }
+.tostado-dark-section .pull-quote { color: var(--white); border-left-color: #C9991A; }
+.tostado-dark-section .serif-body { color: rgba(248,246,242,0.75); }
+</style>
+</head>
+<body id="body">
+
+<nav>
+  <a class="nav-logo" href="/">COFI TRADERS</a>
+  <div class="nav-center">
+    <a href="/about.html"><span class="en-only">About</span><span class="es-only">Nosotros</span></a>
+    <a href="/producers.html"><span class="en-only">Producers</span><span class="es-only">Productores</span></a>
+    <a href="/catalog.html"><span class="en-only">Catalog</span><span class="es-only">Catálogo</span></a>
+    <a href="/how-it-works.html"><span class="en-only">How it works</span><span class="es-only">Cómo funciona</span></a>
+    <a href="/contact.html"><span class="en-only">Contact</span><span class="es-only">Contacto</span></a>
+  </div>
+  <div class="nav-right">
+    <div class="nav-lang">
+      <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" id="btn-es" onclick="setLang('es')">ES</button>
+    </div>
+    <button class="nav-hamburger" onclick="toggleNav()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-mobile" id="nav-mobile">
+  <a href="/about.html" onclick="toggleNav()"><span class="en-only">About</span><span class="es-only">Nosotros</span></a>
+  <a href="/producers.html" onclick="toggleNav()"><span class="en-only">Producers</span><span class="es-only">Productores</span></a>
+  <a href="/catalog.html" onclick="toggleNav()"><span class="en-only">Catalog</span><span class="es-only">Catálogo</span></a>
+  <a href="/how-it-works.html" onclick="toggleNav()"><span class="en-only">How it works</span><span class="es-only">Cómo funciona</span></a>
+  <a href="/contact.html" onclick="toggleNav()"><span class="en-only">Contact</span><span class="es-only">Contacto</span></a>
+</div>
+
+<!-- HERO -->
+<section class="tostado-hero">
+  <div class="tostado-hero-bg"></div>
+  <div class="tostado-hero-content">
+    <p class="tostado-hero-eyebrow">
+      <span class="en-only">COFI TRADERS · Roasted to order · Costa Rica</span>
+      <span class="es-only">COFI TRADERS · Tostado a pedido · Costa Rica</span>
+    </p>
+    <h1 class="tostado-hero-title en-only">FRESH<br>ROASTED</h1>
+    <h1 class="tostado-hero-title es-only">RECIÉN<br>TOSTADO</h1>
+    <p class="tostado-hero-sub en-block">
+      The same lots we send to roasters in Tokyo — roasted fresh in Costa Rica, so that a little piece of this extraordinary quality stays home.
+    </p>
+    <p class="tostado-hero-sub es-block">
+      Los mismos lotes que exportamos al mundo — tostados en Costa Rica, para que un pedacito de esta calidad extraordinaria se quede en casa.
+    </p>
+    <div style="margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap;">
+      <a href="https://wa.me/50685208232?text=Hola!%20Quiero%20pedir%20caf%C3%A9%20tostado%20de%20COFI%20TRADERS.%20%C2%BFQu%C3%A9%20lotes%20tienen%20disponibles%3F" target="_blank" rel="noopener"
+        class="btn btn-primary" style="background:#C9991A;border-color:#C9991A;color:#0A0A0A;">
+        <span class="en-only">Order on WhatsApp →</span>
+        <span class="es-only">Pedir por WhatsApp →</span>
+      </a>
+      <a href="#lotes" class="btn btn-outline" style="border-color:rgba(248,246,242,0.35);color:#F8F6F2;">
+        <span class="en-only">See the lots</span>
+        <span class="es-only">Ver los lotes</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="tostado-stats">
+  <div class="tostado-stat">
+    <span class="tostado-stat-val">5</span>
+    <span class="tostado-stat-lbl"><span class="en-only">Lots available</span><span class="es-only">Lotes disponibles</span></span>
+  </div>
+  <div class="tostado-stat">
+    <span class="tostado-stat-val">48H</span>
+    <span class="tostado-stat-lbl"><span class="en-only">Roasted &amp; ships</span><span class="es-only">Tostado y enviado</span></span>
+  </div>
+  <div class="tostado-stat">
+    <span class="tostado-stat-val">100%</span>
+    <span class="tostado-stat-lbl"><span class="en-only">Single origin</span><span class="es-only">Origen único</span></span>
+  </div>
+  <div class="tostado-stat">
+    <span class="tostado-stat-val">CR</span>
+    <span class="tostado-stat-lbl"><span class="en-only">Roasted in Costa Rica</span><span class="es-only">Tostado en Costa Rica</span></span>
+  </div>
+</div>
+
+<!-- STORY SECTION -->
+<div class="tostado-dark-section">
+  <div style="max-width:800px;margin:0 auto;">
+    <p class="eyebrow en-only" style="margin-bottom:2rem;">The origin story</p>
+    <p class="eyebrow es-only" style="margin-bottom:2rem;">La historia de origen</p>
+    <p class="pull-quote en-block" style="margin-bottom:2.5rem;">
+      "Everything we find for export is extraordinary. But we decided to keep the very best — the 1% of the 1% — for the people who live closest to where it grows."
+    </p>
+    <p class="pull-quote es-block" style="margin-bottom:2.5rem;">
+      "Todo lo que encontramos para exportar es extraordinario. Pero decidimos guardarnos lo mejor — el 1% del 1% — para la gente que vive más cerca de donde crece."
+    </p>
+    <p class="serif-body en-block" style="margin-bottom:1.5rem;">
+      COFI TRADERS sources micro-lots from small producers in the Brunca region — grown at altitude, processed with precision, destined for specialty roasters around the world. But not all of it leaves. We roast to order directly from these same lots, so that Costa Ricans can enjoy the same quality that reaches Tokyo, Oslo, or New York.
+    </p>
+    <p class="serif-body es-block" style="margin-bottom:1.5rem;">
+      COFI TRADERS selecciona micro-lotes de pequeños productores en la región Brunca — cultivados en altura, procesados con precisión, destinados a tostadores de especialidad en el mundo entero. Pero no todo se va. Tostamos a pedido directamente de estos mismos lotes, para que los costarricenses puedan disfrutar la misma calidad que llega a Tokio, Oslo o Nueva York.
+    </p>
+    <p class="serif-body en-block">
+      No intermediaries. No brand markup. Just the coffee, the producer's name, and a roast made for you.
+    </p>
+    <p class="serif-body es-block">
+      Sin intermediarios. Sin sobreprecio de marca. Solo el café, el nombre del productor, y un tueste hecho para vos.
+    </p>
+  </div>
+</div>
+
+<!-- LOTS -->
+<div id="lotes">
+  <div style="padding:2rem 1.5rem 1rem;border-bottom:1px solid rgba(10,10,10,0.1);">
+    <p class="eyebrow en-only">Current lots — 2025 harvest</p>
+    <p class="eyebrow es-only">Lotes actuales — cosecha 2025</p>
+  </div>
+
+  <!-- MILENIO BLACK CHERRY -->
+  <div class="tostado-lot" style="--lot-color:#7654B0;">
+    <span class="tostado-lot-num">01</span>
+    <div>
+      <p class="tostado-lot-name">MILENIO BLACK CHERRY</p>
+      <p class="tostado-lot-detail">H10 · Anaerobic · Lica Torres · 1,600 masl</p>
+      <p class="tostado-lot-notes en-only">Dark fruit, hibiscus, chocolate. Bold and complex.</p>
+      <p class="tostado-lot-notes es-only">Fruta oscura, hibisco, chocolate. Intenso y complejo.</p>
+    </div>
+    <span class="tostado-lot-tag">Anaerobic</span>
+  </div>
+
+  <!-- ETÍOPE 47 WHITE HONEY -->
+  <div class="tostado-lot" style="--lot-color:#E03D35;">
+    <span class="tostado-lot-num">02</span>
+    <div>
+      <p class="tostado-lot-name">ETÍOPE 47 WHITE HONEY</p>
+      <p class="tostado-lot-detail">SL28 · White Honey · Lica Torres · 1,800 masl</p>
+      <p class="tostado-lot-notes en-only">Peach, bergamot, honey. Delicate and floral.</p>
+      <p class="tostado-lot-notes es-only">Durazno, bergamota, miel. Delicado y floral.</p>
+    </div>
+    <span class="tostado-lot-tag">White Honey</span>
+  </div>
+
+  <!-- MILENIO RED HONEY -->
+  <div class="tostado-lot" style="--lot-color:#C9991A;">
+    <span class="tostado-lot-num">03</span>
+    <div>
+      <p class="tostado-lot-name">MILENIO RED HONEY</p>
+      <p class="tostado-lot-detail">H10 · Red Honey · Lica Torres · 1,600 masl</p>
+      <p class="tostado-lot-notes en-only">Red fruits, plum, honey. Sweet and balanced.</p>
+      <p class="tostado-lot-notes es-only">Frutos rojos, ciruela, miel. Dulce y equilibrado.</p>
+    </div>
+    <span class="tostado-lot-tag" style="border-color:#C9991A;color:#C9991A;">Red Honey</span>
+  </div>
+
+  <!-- VENECIA HONEY -->
+  <div class="tostado-lot" style="--lot-color:#C9991A;">
+    <span class="tostado-lot-num">04</span>
+    <div>
+      <p class="tostado-lot-name">VENECIA HONEY</p>
+      <p class="tostado-lot-detail">Venecia · Honey · Don Humberto · 1,300 masl</p>
+      <p class="tostado-lot-notes en-only">Mandarin, peach, caramel, cacao. Juicy and silky.</p>
+      <p class="tostado-lot-notes es-only">Mandarina, durazno, caramelo, cacao. Jugoso y sedoso.</p>
+    </div>
+    <span class="tostado-lot-tag" style="border-color:#C9991A;color:#C9991A;">Honey</span>
+  </div>
+
+  <!-- CENTROAMERICANO NATURAL -->
+  <div class="tostado-lot" style="--lot-color:#5A9E3A;">
+    <span class="tostado-lot-num">05</span>
+    <div>
+      <p class="tostado-lot-name">CENTROAMERICANO NATURAL</p>
+      <p class="tostado-lot-detail">Centroamericano · Natural · Don Humberto · 1,300 masl</p>
+      <p class="tostado-lot-notes en-only">Red fruits, red wine, cacao. Expressive and creamy.</p>
+      <p class="tostado-lot-notes es-only">Frutos rojos, vino tinto, cacao. Expresivo y cremoso.</p>
+    </div>
+    <span class="tostado-lot-tag" style="border-color:#5A9E3A;color:#5A9E3A;">Natural</span>
+  </div>
+
+</div>
+
+<!-- HOW TO ORDER -->
+<div class="section" style="border-top:1px solid var(--black);">
+  <p class="eyebrow en-only" style="margin-bottom:2.5rem;">How to order</p>
+  <p class="eyebrow es-only" style="margin-bottom:2.5rem;">Cómo pedir</p>
+
+  <div style="max-width:600px;">
+    <div class="order-step">
+      <span class="order-step-num">01</span>
+      <div>
+        <p class="order-step-title en-only">Choose your lot</p>
+        <p class="order-step-title es-only">Elegí tu lote</p>
+        <p class="order-step-desc en-only">Pick from the 5 lots above — or tell us your flavor preference and we'll recommend one.</p>
+        <p class="order-step-desc es-only">Elegí de los 5 lotes arriba — o contanos qué sabores te gustan y te recomendamos uno.</p>
+      </div>
+    </div>
+
+    <div class="order-step">
+      <span class="order-step-num">02</span>
+      <div>
+        <p class="order-step-title en-only">Message us on WhatsApp</p>
+        <p class="order-step-title es-only">Escribinos por WhatsApp</p>
+        <p class="order-step-desc en-only">Tell us which lot, your roast preference (light / medium / medium-dark), and your location. We'll confirm price and delivery.</p>
+        <p class="order-step-desc es-only">Decinos qué lote querés, el punto de tueste (claro / medio / medio-oscuro), y tu ubicación. Te confirmamos el precio y el envío.</p>
+      </div>
+    </div>
+
+    <div class="order-step">
+      <span class="order-step-num">03</span>
+      <div>
+        <p class="order-step-title en-only">Roasted &amp; shipped in 48h</p>
+        <p class="order-step-title es-only">Tostado y enviado en 48h</p>
+        <p class="order-step-desc en-only">We roast fresh on your order — no sitting in a warehouse. Your coffee ships within 48 hours of roasting, with the producer's full profile included.</p>
+        <p class="order-step-desc es-only">Tostamos fresco con tu pedido — nada de inventario viejo. Tu café sale en menos de 48 horas del tueste, con el perfil completo del productor incluido.</p>
+      </div>
+    </div>
+
+    <div class="order-step" style="border-bottom:none;">
+      <span class="order-step-num">04</span>
+      <div>
+        <p class="order-step-title en-only">Enjoy — and tell us what you tasted</p>
+        <p class="order-step-title es-only">Disfrutá — y contanos qué encontraste</p>
+        <p class="order-step-desc en-only">That feedback goes directly back to the producer. Your cup closes the loop.</p>
+        <p class="order-step-desc es-only">Ese feedback llega directo al productor. Tu taza cierra el ciclo.</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:3rem;">
+    <a href="https://wa.me/50685208232?text=Hola!%20Quiero%20pedir%20caf%C3%A9%20tostado%20de%20COFI%20TRADERS.%20%C2%BFQu%C3%A9%20lotes%20tienen%20disponibles%3F" target="_blank" rel="noopener"
+      class="btn btn-primary" style="background:#0A0A0A;">
+      <span class="en-only">Order on WhatsApp →</span>
+      <span class="es-only">Pedir por WhatsApp →</span>
+    </a>
+  </div>
+</div>
+
+<!-- CLOSING NOTE — EXPORT LINK -->
+<div class="section section-warm" style="text-align:center;">
+  <p class="eyebrow en-only" style="margin-bottom:0.75rem;">Are you a roaster?</p>
+  <p class="eyebrow es-only" style="margin-bottom:0.75rem;">¿Sos un tostador?</p>
+  <p class="serif-body en-block" style="max-width:520px;margin:0 auto 1.5rem;">
+    If you're looking to source green coffee for your roastery, we also offer full export with EUDR documentation, shared container splits, and a sample program.
+  </p>
+  <p class="serif-body es-block" style="max-width:520px;margin:0 auto 1.5rem;">
+    Si buscás comprar café verde para tu tostadería, también exportamos con documentación EUDR, divisiones de contenedor compartido y programa de muestras.
+  </p>
+  <a href="/catalog.html" class="btn btn-outline">
+    <span class="en-only">See the green coffee catalog →</span>
+    <span class="es-only">Ver el catálogo de café verde →</span>
+  </a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <p class="footer-logo">COFI<br>TRADERS</p>
+    <p class="footer-tagline">Sabalito, Coto Brus · Costa Rica</p>
+    <p class="footer-copy">© 2025 COFI TRADERS · cofi.cr</p>
+  </div>
+  <nav class="footer-nav">
+    <a href="/about.html"><span class="en-only">About</span><span class="es-only">Nosotros</span></a>
+    <a href="/producers.html"><span class="en-only">Producers</span><span class="es-only">Productores</span></a>
+    <a href="/catalog.html"><span class="en-only">Catalog</span><span class="es-only">Catálogo</span></a>
+    <a href="/tostado.html" class="active"><span class="en-only">Fresh Roasted</span><span class="es-only">Recién Tostado</span></a>
+    <a href="/contact.html"><span class="en-only">Contact</span><span class="es-only">Contacto</span></a>
+    <a href="/privacy.html"><span class="en-only">Privacy</span><span class="es-only">Privacidad</span></a>
+  </nav>
+</footer>
+
+<a class="whatsapp-btn" href="https://wa.me/50685208232?text=Hola!%20Quiero%20pedir%20caf%C3%A9%20tostado%20de%20COFI%20TRADERS.%20%C2%BFQu%C3%A9%20lotes%20tienen%20disponibles%3F" target="_blank" rel="noopener">
+  <svg class="whatsapp-icon" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  WhatsApp
+</a>
+<div class="lang-float">
+  <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+  <button class="lang-btn" id="btn-es" onclick="setLang('es')">ES</button>
+</div>
+
+<script src="/js/main.js"></script>
+</body>
+</html>
