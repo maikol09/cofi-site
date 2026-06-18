@@ -35,6 +35,12 @@ body.es .en-block { display: none !important; }
 body.es .es-block { display: block; }
 .es-block { display: none; }
 
+/* Block-level elements toggled via -only must stay block in ES (avoid inline overlap) */
+body.es h1.es-only,
+body.es h2.es-only,
+body.es h3.es-only,
+body.es p.es-only { display: block; }
+
 /* ─── NAV ─── */
 body > nav {
   position: fixed;
